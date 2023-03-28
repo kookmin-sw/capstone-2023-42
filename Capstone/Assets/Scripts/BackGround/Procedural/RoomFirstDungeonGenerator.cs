@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
@@ -16,23 +18,52 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     private int offset = 1;
     [SerializeField]
     private bool randomWalkRooms = false;
+    
+    // [SerializeField]
+    // private InputActionReference generate;
 
     public UnityEvent OnFinishedRoomGeneration;
+    private DungeonData dungeonData;
+
+
+    private void makeDungeonData()
+    {
+        dungeonData = FindObjectOfType<DungeonData>();
+        if (dungeonData == null)
+            dungeonData = gameObject.AddComponent<DungeonData>();
+
+        // generate.action.performed += RunProceduralGeneration;
+    }
+
+    public static List<Vector2Int> fourDirections = new()
+    {
+        Vector2Int.up,
+        Vector2Int.right,
+        Vector2Int.down,
+        Vector2Int.left
+    };
 
     protected override void RunProceduralGeneration()
-    {
+    {   
+        makeDungeonData();
         CreateRooms();
         OnFinishedRoomGeneration?.Invoke();
     }
 
     private void CreateRooms()
     {
+        // dungeonData.Reset();
+        // if(dungeonData != null)
+        //     Debug.Log("TEST");
+
         var roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
 
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         
+        
         if(randomWalkRooms)
         {
+            dungeonData.Reset();
             floor = CreateRoomsRandomly(roomsList);
         }
         else
@@ -48,6 +79,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         }
 
         HashSet<Vector2Int> corridors = ConnectRooms(roomCenters);
+        dungeonData.Path.UnionWith(corridors);
         
         floor.UnionWith(corridors);
 
@@ -58,11 +90,15 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
+        
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
         {
             var roomBounds = roomsList[i];
             var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
+            
+            // Debug.Log(roomsList[i]);
+            // Instantiate(obj, new Vector3(roomCenter.x, roomCenter.y, 0), Quaternion.identity);
             var roomFloor = RunRandomWalk( randomWalkParameters, roomCenter);
             foreach (var position in roomFloor)
             {
@@ -71,9 +107,16 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                     floor.Add(position);
                 }                
             }
+            
+            dungeonData.Rooms.Add(new Room(roomCenter, floor));
         }
         return floor;
     }
+
+    // private Room ReturnRoom(Vector2 roomCenter, HashSet<Vector2Int> floor)
+    // {
+    //     return new 
+    // }
 
     private HashSet<Vector2Int> ConnectRooms(List<Vector2Int> roomCenters)
     {

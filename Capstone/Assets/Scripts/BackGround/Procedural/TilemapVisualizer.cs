@@ -28,10 +28,26 @@ public class TilemapVisualizer : MonoBehaviour
         PaintTiles(corridorPositions, corridorTilemap, testTile);
     }
 
+    // private IEnumerator PaintTilesCoroutine(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
+    // {
+    //     foreach (var position in positions)
+    //     {
+    //         PaintSingleTile(tilemap, tile, position);
+    //         yield return new WaitForSeconds(0.01f);
+    //     }
+    // }
+
+    // private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
+    // {
+    //     StartCoroutine(PaintTilesCoroutine(positions, tilemap, tile));
+    // }
+
+
     private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     {
         foreach (var position in positions)
         {
+            // Invoke("PaintSingleTile", 0.1f, tile);
             PaintSingleTile(tilemap, tile, position);
         }
     }
@@ -66,6 +82,7 @@ public class TilemapVisualizer : MonoBehaviour
     {
         var tilePosition = tilemap.WorldToCell((Vector3Int)position);
         tilemap.SetTile(tilePosition, tile);
+
     }
 
     public void Clear()
