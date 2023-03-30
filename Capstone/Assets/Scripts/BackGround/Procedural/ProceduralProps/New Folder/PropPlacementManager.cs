@@ -329,6 +329,7 @@ public class PropPlacementManager : MonoBehaviour
         GameObject prop = Instantiate(propPrefab);
         SpriteRenderer propSpriteRenderer = prop.GetComponentInChildren<SpriteRenderer>();
         
+        
         //set the sprite
         propSpriteRenderer.sprite = propToPlace.PropSprite;
 
@@ -344,10 +345,12 @@ public class PropPlacementManager : MonoBehaviour
             = new Vector2(propToPlace.PropSize.x*0.8f, propToPlace.PropSize.y*0.8f);
         collider.size = size;
 
-        prop.transform.localPosition = (Vector2)placementPostion;
+        // prop.transform.localPosition = (Vector2)placementPostion;
+        prop.transform.localPosition = (Vector2)placementPostion + new Vector2(0.5f, 0.5f);
+        
         //adjust the position to the sprite
-        propSpriteRenderer.transform.localPosition 
-            = (Vector2)propToPlace.PropSize * 0.5f;
+        // propSpriteRenderer.transform.localPosition 
+        //     = (Vector2)propToPlace.PropSize * 1.5f;
 
         //Save the prop in the room data (so in the dunbgeon data)
         room.PropPositions.Add(placementPostion);
