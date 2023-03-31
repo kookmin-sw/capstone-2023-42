@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Corridor
+    uniqueID: 4245425087
+    locked: 0
