@@ -8,8 +8,12 @@ public class TilemapVisualizer : MonoBehaviour
 {
     [SerializeField]
     private Tilemap floorTilemap, wallTilemap;
+    //
     [SerializeField]
-    private TileBase floorTile, wallTop, wallSideRight, wallSideLeft, wallBottom, wallFull, 
+    private Tilemap corridorTilemap;
+    //
+    [SerializeField]
+    private TileBase testTile, floorTile, wallTop, wallSideRight, wallSideLeft, wallBottom, wallFull, 
         wallInnerCornerDownLeft, wallInnerCornerDownRight, 
         wallDiagonalCornerDownRight, wallDiagonalCornerDownLeft, wallDiagonalCornerUpRight, wallDiagonalCornerUpLeft;
 
@@ -18,10 +22,32 @@ public class TilemapVisualizer : MonoBehaviour
         PaintTiles(floorPositions, floorTilemap, floorTile);
     }
 
+    //
+    public void PaintCorridor(IEnumerable<Vector2Int> corridorPositions)
+    {
+        PaintTiles(corridorPositions, corridorTilemap, testTile);
+    }
+
+    // private IEnumerator PaintTilesCoroutine(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
+    // {
+    //     foreach (var position in positions)
+    //     {
+    //         PaintSingleTile(tilemap, tile, position);
+    //         yield return new WaitForSeconds(0.01f);
+    //     }
+    // }
+
+    // private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
+    // {
+    //     StartCoroutine(PaintTilesCoroutine(positions, tilemap, tile));
+    // }
+
+
     private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     {
         foreach (var position in positions)
         {
+            // Invoke("PaintSingleTile", 0.1f, tile);
             PaintSingleTile(tilemap, tile, position);
         }
     }
@@ -56,12 +82,14 @@ public class TilemapVisualizer : MonoBehaviour
     {
         var tilePosition = tilemap.WorldToCell((Vector3Int)position);
         tilemap.SetTile(tilePosition, tile);
+
     }
 
     public void Clear()
     {
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
+        corridorTilemap.ClearAllTiles();
     }
 
     internal void PaintSingleCornerWall(Vector2Int position, string binaryType)
