@@ -123,6 +123,6 @@ MonoBehaviour:
   canMove: 1
   direction: {x: 0, y: 0}
   dest: {x: 0, y: 0}
-  movePixel: 1
+  movePixel: 2
   moveRatio: 0
   moveSpeedPerFrame: 0.001
