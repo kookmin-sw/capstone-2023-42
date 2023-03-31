@@ -17,7 +17,7 @@ public class MonsterHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RandomDice Instance = GameObject.Find("Dice").GetComponent<RandomDice>();
+        MonsterAttack Instance = GameObject.Find("Monster").GetComponent<MonsterAttack>();
         HP.text = Instance.MonsterHP.ToString();
     }
 }
