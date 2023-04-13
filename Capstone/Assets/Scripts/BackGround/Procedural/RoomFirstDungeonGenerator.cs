@@ -84,7 +84,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         floor.UnionWith(corridors);
 
         tilemapVisualizer.PaintFloorTiles(floor);
-        tilemapVisualizer.PaintCorridor(corridors);
+        // tilemapVisualizer.PaintCorridor(corridors);
         WallGenerator.CreateWalls(floor, tilemapVisualizer);
     }
 
