@@ -9,24 +9,24 @@ public class TilemapVisualizer : MonoBehaviour
     [SerializeField]
     private Tilemap floorTilemap, wallTilemap;
     //
-    [SerializeField]
-    private Tilemap corridorTilemap;
+    // [SerializeField]
+    // private Tilemap corridorTilemap;
     //
     [SerializeField]
     private TileBase testTile, floorTile, wallTop, wallSideRight, wallSideLeft, wallBottom, wallFull, 
         wallInnerCornerDownLeft, wallInnerCornerDownRight, 
         wallDiagonalCornerDownRight, wallDiagonalCornerDownLeft, wallDiagonalCornerUpRight, wallDiagonalCornerUpLeft;
 
-    public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
-    {
-        PaintTiles(floorPositions, floorTilemap, floorTile);
-    }
+    // public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
+    // {
+    //     PaintTiles(floorPositions, floorTilemap, floorTile);
+    // }
 
-    //
-    public void PaintCorridor(IEnumerable<Vector2Int> corridorPositions)
-    {
-        PaintTiles(corridorPositions, corridorTilemap, testTile);
-    }
+    // //
+    // public void PaintCorridor(IEnumerable<Vector2Int> corridorPositions)
+    // {
+    //     PaintTiles(corridorPositions, corridorTilemap, testTile);
+    // }
 
     // private IEnumerator PaintTilesCoroutine(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     // {
@@ -41,6 +41,11 @@ public class TilemapVisualizer : MonoBehaviour
     // {
     //     StartCoroutine(PaintTilesCoroutine(positions, tilemap, tile));
     // }
+
+    public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
+    {
+        PaintTiles(floorPositions, floorTilemap, floorTile);
+    }
 
 
     private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
@@ -89,7 +94,7 @@ public class TilemapVisualizer : MonoBehaviour
     {
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
-        corridorTilemap.ClearAllTiles();
+        // corridorTilemap.ClearAllTiles();
     }
 
     internal void PaintSingleCornerWall(Vector2Int position, string binaryType)

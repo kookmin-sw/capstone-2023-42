@@ -31,42 +31,6 @@ public class PropPlacementManager : MonoBehaviour
             return;
         foreach (Room room in dungeonData.Rooms)
         {
-            //Place props place props in the corners
-            List<Prop> cornerProps = propsToPlace.Where(x => x.Corner).ToList();
-            PlaceCornerProps(room, cornerProps);
-
-            //Place props near LEFT wall
-            List<Prop> leftWallProps = propsToPlace
-            .Where(x => x.NearWallLeft)
-            .OrderByDescending(x => x.PropSize.x * x.PropSize.y)
-            .ToList();
-
-            PlaceProps(room, leftWallProps, room.NearWallTilesLeft, PlacementOriginCorner.BottomLeft);
-
-            //Place props near RIGHT wall
-            List<Prop> rightWallProps = propsToPlace
-            .Where(x => x.NearWallRight)
-            .OrderByDescending(x => x.PropSize.x * x.PropSize.y)
-            .ToList();
-
-            PlaceProps(room, rightWallProps, room.NearWallTilesRight, PlacementOriginCorner.TopRight);
-
-            //Place props near UP wall
-            List<Prop> topWallProps = propsToPlace
-            .Where(x => x.NearWallUP)
-            .OrderByDescending(x => x.PropSize.x * x.PropSize.y)
-            .ToList();
-
-            PlaceProps(room, topWallProps, room.NearWallTilesUp, PlacementOriginCorner.TopLeft);
-
-            //Place props near DOWN wall
-            List<Prop> downWallProps = propsToPlace
-            .Where(x => x.NearWallDown)
-            .OrderByDescending(x => x.PropSize.x * x.PropSize.y)
-            .ToList();
-
-            PlaceProps(room, downWallProps, room.NearWallTilesDown, PlacementOriginCorner.BottomLeft);
-
             //Place inner props
             List<Prop> innerProps = propsToPlace
                 .Where(x => x.Inner)
