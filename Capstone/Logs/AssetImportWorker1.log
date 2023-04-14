@@ -1,6 +1,10 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.19f1 (c9714fde33b6) revision 13201743'; Using compiler version '192829333'; Build Type 'Release'
+<<<<<<< HEAD
 OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ko' Physical Memory: 16292 MB
+=======
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ko' Physical Memory: 16292 MB
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +19,11 @@ C:/Users/최지원/capstone-2023-42/Capstone
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50435
+<<<<<<< HEAD
+50810
+=======
+56527
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 Successfully changed project path to: C:/Users/최지원/capstone-2023-42/Capstone
 C:/Users/최지원/capstone-2023-42/Capstone
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +55,19 @@ C:/Users/최지원/capstone-2023-42/Capstone
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [17004] Host "[IP] 10.30.117.255 [Port] 0 [Flags] 2 [Guid] 502615726 [EditorId] 502615726 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-OFNFSF51) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+<<<<<<< HEAD
+Player connection [16420] Host "[IP] 10.30.117.255 [Port] 0 [Flags] 2 [Guid] 1418655031 [EditorId] 1418655031 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-OFNFSF51) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [17004] Host "[IP] 10.30.117.255 [Port] 0 [Flags] 2 [Guid] 502615726 [EditorId] 502615726 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-OFNFSF51) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16420] Host "[IP] 10.30.117.255 [Port] 0 [Flags] 2 [Guid] 1418655031 [EditorId] 1418655031 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-OFNFSF51) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 124.55 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 108.42 ms, found 4 plugins.
+=======
+Player connection [18168] Host "[IP] 10.30.117.255 [Port] 0 [Flags] 2 [Guid] 1851886760 [EditorId] 1851886760 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-OFNFSF51) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [18168] Host "[IP] 10.30.117.255 [Port] 0 [Flags] 2 [Guid] 1851886760 [EditorId] 1851886760 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-OFNFSF51) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 108.58 ms, found 4 plugins.
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
@@ -67,119 +83,196 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+<<<<<<< HEAD
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56472
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56564
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012527 seconds.
+<<<<<<< HEAD
+Registered in 0.012399 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 340 ms
-Refreshing native plugins compatible for Editor in 115.84 ms, found 4 plugins.
+Android Extension - Scanning For ADB Devices 306 ms
+Refreshing native plugins compatible for Editor in 104.82 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.165 seconds
+- Completed reload, in  1.114 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1166ms)
-		BeginReloadAssembly (91ms)
+	ReloadAssembly (1114ms)
+		BeginReloadAssembly (90ms)
+=======
+Registered in 0.008882 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 322 ms
+Refreshing native plugins compatible for Editor in 103.16 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.105 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1105ms)
+		BeginReloadAssembly (92ms)
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (943ms)
-			LoadAssemblies (88ms)
+<<<<<<< HEAD
+		EndReloadAssembly (883ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (127ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (696ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (638ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (426ms)
+				InitializePlatformSupportModulesInManaged (385ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (116ms)
+				RefreshPlugins (105ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (98ms)
-				ProcessInitializeOnLoadMethodAttributes (54ms)
+				ProcessInitializeOnLoadAttributes (91ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+=======
+		EndReloadAssembly (870ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (126ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (402ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (103ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (94ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013181 seconds.
+<<<<<<< HEAD
+Registered in 0.012703 seconds.
+=======
+Registered in 0.014814 seconds.
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\최지원\capstone-2023-42\Capstone\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\최지원\capstone-2023-42\Capstone\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 107.11 ms, found 4 plugins.
+<<<<<<< HEAD
+Refreshing native plugins compatible for Editor in 111.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.559 seconds
+- Completed reload, in  1.594 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1559ms)
-		BeginReloadAssembly (122ms)
+	ReloadAssembly (1595ms)
+		BeginReloadAssembly (133ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (1298ms)
-			LoadAssemblies (102ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1329ms)
+			LoadAssemblies (114ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (284ms)
+			SetupTypeCache (272ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (792ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (836ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (19ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (107ms)
-				BeforeProcessingInitializeOnLoad (117ms)
-				ProcessInitializeOnLoadAttributes (502ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				RefreshPlugins (112ms)
+				BeforeProcessingInitializeOnLoad (122ms)
+				ProcessInitializeOnLoadAttributes (523ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (13ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4283 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 51 unused Assets / (129.4 KB). Loaded Objects now: 4745.
 Memory consumption went from 169.1 MB to 169.0 MB.
-Total: 4.329900 ms (FindLiveObjects: 0.336800 ms CreateObjectMapping: 0.269300 ms MarkObjects: 3.618300 ms  DeleteObjects: 0.104500 ms)
+Total: 3.863000 ms (FindLiveObjects: 0.339800 ms CreateObjectMapping: 0.258100 ms MarkObjects: 3.162100 ms  DeleteObjects: 0.102100 ms)
+=======
+Refreshing native plugins compatible for Editor in 129.12 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.095 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2096ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (1766ms)
+			LoadAssemblies (146ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (374ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (1092ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (129ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (701ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4283 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 51 unused Assets / (129.5 KB). Loaded Objects now: 4744.
+Memory consumption went from 169.1 MB to 168.9 MB.
+Total: 8.530900 ms (FindLiveObjects: 0.599200 ms CreateObjectMapping: 0.535300 ms MarkObjects: 7.239000 ms  DeleteObjects: 0.155300 ms)
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+<<<<<<< HEAD
+=======
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+<<<<<<< HEAD
+=======
 ========================================================================
 Received Import Request.
-  Time since last request: 1012.874221 seconds.
-  path: Assets/Prefabs/Props/Player_Test.prefab
-  artifactKey: Guid(bdb9a65addf1ba347b9358d78b07934c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Props/Player_Test.prefab using Guid(bdb9a65addf1ba347b9358d78b07934c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e349e68d4c849c9721c43ee467cce407') in 0.111610 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Prefabs/Props/PropParent.prefab
-  artifactKey: Guid(60e058bf199bd3741aff97d6533b456b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Props/PropParent.prefab using Guid(60e058bf199bd3741aff97d6533b456b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7331b61e4ec595c8d316d9f9a8c66960') in 0.004841 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Prefabs/Props/Test.asset
-  artifactKey: Guid(756ed0318746c3a478360d1e0cd6b871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Props/Test.asset using Guid(756ed0318746c3a478360d1e0cd6b871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad1fefb6992bdca8813074547508db9') in 0.007124 seconds 
+  Time since last request: 132833.842776 seconds.
+  path: Assets/Scripts/Dungeon
+  artifactKey: Guid(c318baf10be254b2d95c04e7aa835dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon using Guid(c318baf10be254b2d95c04e7aa835dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc458e4d12d4c63696352fb371d150c') in 0.013930 seconds 
+>>>>>>> parent of d2fb242 (Merge remote-tracking branch 'origin/JiHun' into jiwon)
