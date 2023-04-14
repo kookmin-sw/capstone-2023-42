@@ -7,7 +7,6 @@ public class RandomDice : MonoBehaviour
 {
     public static RandomDice instance;
     public int result;
-    int flag = 0;
 
     void Awake()
     {
