@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Player : Character
 {
-    // Update is called once per frame
     void Update()
     {
-        Move();
-    }
-    protected override void Move()
-    {
-        base.Move();
+        Move(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 }

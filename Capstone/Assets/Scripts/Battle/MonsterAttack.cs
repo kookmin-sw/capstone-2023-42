@@ -6,6 +6,7 @@ public class MonsterAttack : MonoBehaviour
 {
     public static MonsterAttack instance;
     public int MonsterHP = 100;
+    public int mflag = 0;
 
     void Awake()
     {
@@ -13,18 +14,19 @@ public class MonsterAttack : MonoBehaviour
     }
 
     public void MAttack()
-    {
-        if (MonsterHP <= 0)
-        {
-            Debug.Log("Monster is dead");
-            //end
-            //flag = 1;
-        }
-        else
+    {        
+        if(mflag == 0)
         {
             RandomDice.instance.Roll();
-            PlayerAttack.instance.PlayerHP -= (10 + RandomDice.instance.result * 5);
+            PlayerAttack.instance.PlayerHP -= (30 + RandomDice.instance.result * 10);
             Debug.Log("Monster Attack");
+            if (PlayerAttack.instance.PlayerHP <= 0)
+            {
+                PlayerAttack.instance.PlayerHP = 0;
+                Debug.Log("Player is dead");
+                //end
+                mflag = 1;
+            }
             Debug.Log("Player's HP is " + PlayerAttack.instance.PlayerHP);
         }
 
