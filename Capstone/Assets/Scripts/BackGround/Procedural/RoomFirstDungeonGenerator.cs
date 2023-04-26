@@ -43,6 +43,12 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         Vector2Int.left
     };
 
+    void Start()
+    {
+        // RunProceduralGeneration();
+        GenerateDungeon();
+    }
+
     protected override void RunProceduralGeneration()
     {   
         makeDungeonData();
