@@ -12,7 +12,8 @@ public class PMAttack : MonoBehaviour
 
     IEnumerator twoStep()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        if(AttackButton.instance.AButton == 1)
         {
             PlayerAttack.instance.PAttack();
             yield return new WaitForSeconds(1);
