@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266b29b7e92f9b54ca2da5d353bde2ce, type: 3}
-  m_Name: "\uC18C\uAC80"
+  m_Name: "\uB178\uB780 \uC9C0\uD321\uC774"
   m_EditorClassIdentifier: 
-  weaponName: "\uC18C\uAC80"
-  weaponLevel: 1
-  weaponDamage: 0
-  weaponSpeed: 0
+  weaponName: "\uB178\uB780 \uC9C0\uD321\uC774"
+  weaponLevel: 2
+  weaponDamage: 5
+  weaponSpeed: 5
