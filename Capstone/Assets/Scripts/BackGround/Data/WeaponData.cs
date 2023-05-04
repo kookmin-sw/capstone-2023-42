@@ -7,6 +7,9 @@ namespace Dungeon.Data
     [CreateAssetMenu(fileName = "WeaponData", menuName = "Scriptable Object/Weapon Data", order = int.MaxValue)]
     public class WeaponData : ScriptableObject
     {
+        // [SerializeField]
+        // private int weaponID;
+        // public int getWeaponID{get{return weaponID;}}
         [SerializeField]
         private string weaponName;
         public string getWeaponName{get{return weaponName;}}
@@ -19,6 +22,7 @@ namespace Dungeon.Data
         [SerializeField]
         private int weaponSpeed;
         public int getWeaponSpeed{get{return weaponSpeed;}}
+        
         
     }
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f775883a3ac5fc4aa6b75e286c2eb57, type: 3}
-  m_Name: EnemyData
+  m_Name: "\uBC40\uD30C\uC774\uC5B4"
   m_EditorClassIdentifier: 
-  enemyName: 
-  health: 0
-  minDamage: 0
-  maxDamage: 0
+  enemyName: "\uBC40\uD30C\uC774\uC5B4"
+  health: 12
+  minDamage: 2
+  maxDamage: 4
   weakWeapon: {fileID: 0}

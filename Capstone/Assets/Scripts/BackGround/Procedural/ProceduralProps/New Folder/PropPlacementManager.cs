@@ -51,7 +51,7 @@ public class PropPlacementManager : MonoBehaviour
 
     private IEnumerator TutorialCoroutine(Action code)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0);
         code();
     }
 
