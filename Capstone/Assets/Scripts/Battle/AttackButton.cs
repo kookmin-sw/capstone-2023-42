@@ -22,7 +22,7 @@ public class AttackButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        attButton = GetComponent<Attack>();
+        attButton = GetComponent<Button>();
         attButton.onClick.AddListener(OnClickButton);
     }
 

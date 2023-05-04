@@ -8,4 +8,8 @@ public class Player : Character
     {
         Move(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
+
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log(other.gameObject.name);
+    }
 }

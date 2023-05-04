@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     public bool canMove = true;
     public Vector2 direction;
     public Vector2 dest;
-    public float movePixel = 3f;
+    public float movePixel = 1f;
     public float moveRatio = 0f;
     public float moveSpeedPerFrame = 0.001f;
 
@@ -44,10 +44,10 @@ public class Character : MonoBehaviour
             moveRatio += moveSpeedPerFrame;
         }
 
-        if (rb.position == dest)
+        if (rb.position == dest || moveRatio >= 1f)
         {
             moveRatio = 0f;
-            transform.position = new Vector2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
+            transform.position = new Vector2(Mathf.Round(transform.position.x * 10) * 0.1f, Mathf.Round(transform.position.y * 10) * 0.1f);
             StartCoroutine(StopMove());
         }
     }
