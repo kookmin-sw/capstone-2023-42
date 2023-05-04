@@ -22,6 +22,12 @@ public class Character : MonoBehaviour
         if (!canMove)
             return;
 
+        if (x != 0 && y != 0)
+        {
+            y = 0;
+        }
+
+
         if (moveRatio == 0f)
         {
             if (x != 0 || y != 0)
@@ -36,6 +42,14 @@ public class Character : MonoBehaviour
                     dest = transform.position + Vector3.up * direction.y;
                 }
                 moveRatio += moveSpeedPerFrame;
+            }
+
+
+            Vector2 next = transform.position + new Vector3(x, y, 0);
+            RaycastHit2D cantGo = Physics2D.Raycast(next, next);
+            if (cantGo)
+            {
+                Debug.Log(cantGo.transform.gameObject.name + ": " + gameObject.name);
             }
         }
         else if (moveRatio < 1f)
