@@ -16,13 +16,13 @@ public class AttackButton : MonoBehaviour
 
     public void OnClickButton()
     {
-        AButton = 1;
+        PMAttack.instance.Attack();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        attButton = GetComponent<Attack>();
+        attButton = GetComponent<Button>();
         attButton.onClick.AddListener(OnClickButton);
     }
 

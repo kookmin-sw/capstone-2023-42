@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class PMAttack : MonoBehaviour
 {
+    public static PMAttack instance;
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    void Awake()
+    {
+        instance = this;
+    }
+
     IEnumerator twoStep()
     {
         //if (Input.GetKeyDown(KeyCode.Space))
-        if(AttackButton.instance.AButton == 1)
-        {
-            PlayerAttack.instance.PAttack();
-            yield return new WaitForSeconds(1);
-            MonsterAttack.instance.MAttack();
-            yield return new WaitForSeconds(1);
-        }
+        PlayerAttack.instance.PAttack();
+        yield return new WaitForSeconds(1);
+        MonsterAttack.instance.MAttack();
+        yield return new WaitForSeconds(1);
+        AttackButton.instance.AButton = 0;
     }
 
-    void Attack()
+    public void Attack()
     {
         /*   
            if (Input.GetKeyUp(KeyCode.Space))
@@ -51,6 +56,6 @@ public class PMAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        
     }
 }

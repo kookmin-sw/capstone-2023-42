@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+
 
 public class MonsterHp : MonoBehaviour
 {
-    TextMeshProUGUI HP;
+    Text HP;
 
     // Start is called before the first frame update
     void Start()
     {
-        HP = GetComponent<TextMeshProUGUI>();
+        HP = GetComponent<Text>();
     }
 
     // Update is called once per frame

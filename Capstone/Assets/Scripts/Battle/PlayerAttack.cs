@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public static PlayerAttack instance;
-    public int PlayerHP = 100;
+    [SerializeField] public int PlayerHP = 100;
+    [SerializeField] public int PlayerSP = 50;
     public int pflag = 0;
 
     void Awake()
@@ -17,25 +18,35 @@ public class PlayerAttack : MonoBehaviour
     {
         if(pflag == 0)
         {
-            RandomDice.instance.Roll();
-            MonsterAttack.instance.MonsterHP -= (30 + RandomDice.instance.result * 10);            
-            Debug.Log("Player Attack");
-            if (MonsterAttack.instance.MonsterHP <= 0)
+            //남은 sp랑 공격에 필요한 sp비교해서 공격이 가능한지 판단
+            //PlayerSP-=attackSP;
+            if (PlayerSP <= 0)
             {
-                MonsterAttack.instance.MonsterHP = 0;
-                Debug.Log("Monster is dead");
-                //end
-                pflag = 1;
+                Debug.Log("SP is not enough");
+                //PlayerSP+=attackSP;
             }
-            Debug.Log("Monster's HP is " + MonsterAttack.instance.MonsterHP);
-        }
+            else
+            {
+                RandomDice.instance.Roll();
+                MonsterAttack.instance.MonsterHP -= (30 + RandomDice.instance.result * 10);
+                Debug.Log("Player Attack");
+                if (MonsterAttack.instance.MonsterHP <= 0)
+                {
+                    MonsterAttack.instance.MonsterHP = 0;
+                    Debug.Log("Monster is dead");
+                    //end
+                    pflag = 1;
+                }
 
+                Debug.Log("Monster's HP is " + MonsterAttack.instance.MonsterHP);
+            }
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

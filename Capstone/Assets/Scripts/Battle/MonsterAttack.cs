@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterAttack : MonoBehaviour
 {
     public static MonsterAttack instance;
-    public int MonsterHP = 100;
+    [SerializeField] public int MonsterHP = 100;
     public int mflag = 0;
 
     void Awake()
