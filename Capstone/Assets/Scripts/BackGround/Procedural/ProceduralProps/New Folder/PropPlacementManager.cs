@@ -19,6 +19,8 @@ public class PropPlacementManager : MonoBehaviour
     private GameObject propPrefab;
 
     public UnityEvent OnFinished;
+    
+    public int max = 0;
 
     private void Awake()
     {
@@ -51,7 +53,7 @@ public class PropPlacementManager : MonoBehaviour
 
     private IEnumerator TutorialCoroutine(Action code)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0);
         code();
     }
 
@@ -68,16 +70,17 @@ public class PropPlacementManager : MonoBehaviour
         //Remove path positions from the initial nearWallTiles to ensure the clear path to traverse dungeon
         HashSet<Vector2Int> tempPositons = new HashSet<Vector2Int>(availableTiles);
         tempPositons.ExceptWith(dungeonData.Path);
-
         //We will try to place all the props
         foreach (Prop propToPlace in wallProps)
         {
             //We want to place only certain quantity of each prop
             int quantity 
-                = UnityEngine.Random.Range(propToPlace.PlacementQuantityMin, propToPlace.PlacementQuantityMax +1);
-
+                = UnityEngine.Random.Range(propToPlace.PlacementPerRoomsMin, propToPlace.PlacementPerRoomsMax +1);
+            
             for (int i = 0; i < quantity; i++)
-            {
+            {   
+                if(max == propToPlace.MaxAmount)
+                    break;
                 //remove taken positions
                 tempPositons.ExceptWith(room.PropPositions);
                 //shuffel the positions
@@ -85,6 +88,8 @@ public class PropPlacementManager : MonoBehaviour
                 //If placement has failed there is no point in trying to place the same prop again
                 if (TryPlacingPropBruteForce(room, propToPlace, availablePositions, placement) == false)
                     break;
+                max++;
+                Debug.Log(max);
             }
 
         }
@@ -298,17 +303,16 @@ public class PropPlacementManager : MonoBehaviour
         propSpriteRenderer.sprite = propToPlace.PropSprite;
 
         //Add a collider
-        CapsuleCollider2D collider 
-            = propSpriteRenderer.gameObject.AddComponent<CapsuleCollider2D>();
-        collider.offset = Vector2.zero;
-        collider.isTrigger = true;
-        if(propToPlace.PropSize.x > propToPlace.PropSize.y)
-        {
-            collider.direction = CapsuleDirection2D.Horizontal;
-        }
-        Vector2 size 
-            = new Vector2(propToPlace.PropSize.x*0.8f, propToPlace.PropSize.y*0.8f);
-        collider.size = size;
+        // CapsuleCollider2D collider 
+        //     = propSpriteRenderer.gameObject.AddComponent<CapsuleCollider2D>();
+        // collider.offset = Vector2.zero;
+        // if(propToPlace.PropSize.x > propToPlace.PropSize.y)
+        // {
+        //     collider.direction = CapsuleDirection2D.Horizontal;
+        // }
+        // Vector2 size 
+        //     = new Vector2(propToPlace.PropSize.x*0.8f, propToPlace.PropSize.y*0.8f);
+        // collider.size = size;
 
         // prop.transform.localPosition = (Vector2)placementPostion;
         prop.transform.localPosition = (Vector2)placementPostion + new Vector2(0.5f, 0.5f);

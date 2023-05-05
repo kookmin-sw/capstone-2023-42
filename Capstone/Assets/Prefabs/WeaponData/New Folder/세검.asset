@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b1fd2e91c8ac940bd9982f316100a2, type: 3}
+  m_Name: "\uC138\uAC80"
+  m_EditorClassIdentifier: 
+  PropSprite: {fileID: -1352410907, guid: cffdbb5a4ec4082458e2405012b16708, type: 3}
+  PropSize: {x: 1, y: 1}
+  Inner: 1
+  PlacementPerRoomsMin: 0
+  PlacementPerRoomsMax: 1
+  MaxAmount: 0
+  PlaceAsGroup: 0
+  GroupMinCount: 1
+  GroupMaxCount: 1
+  Enemy: 0
+  enemyName: 
+  hp: 0
+  minDamage: 0
+  maxDamage: 0
+  healPotion: 0
+  skillPotion: 0
+  healAmount: 0
+  weapon: 1
+  weaponName: 
+  weaponDamage: 0
