@@ -25,6 +25,10 @@ public class DungeonData : MonoBehaviour
             {
                 Destroy(item);
             }
+            foreach (var item in room.PropsInTheRoom)
+            {
+                Destroy(item);
+            }
         }
         Rooms = new();
         Path = new();
@@ -61,6 +65,7 @@ public class Room
     public List<Vector2Int> PositionsAccessibleFromPath { get; set; } = new List<Vector2Int>();
 
     public List<GameObject> EnemiesInTheRoom { get; set; } = new List<GameObject>();
+    public List<GameObject> PropsInTheRoom { get; set; } = new List<GameObject>();
 
     public Room(Vector2 roomCenterPos, HashSet<Vector2Int> floorTiles)
     {

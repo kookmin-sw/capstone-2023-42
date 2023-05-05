@@ -13691,9 +13691,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propsToPlace:
+  - {fileID: 11400000, guid: 060f7626785ed3d4aa50b89ee452e929, type: 2}
+  - {fileID: 11400000, guid: 6e02666783a627c4eaace129da166a4a, type: 2}
+  - {fileID: 11400000, guid: 438c9a18be2e4fc4490de5804d131db9, type: 2}
+  - {fileID: 11400000, guid: 8d84589548b78444da09f39f1de98d55, type: 2}
+  - {fileID: 11400000, guid: 87c347b869754f34aad1116099c6ef76, type: 2}
+  - {fileID: 11400000, guid: 136133ee9a1bc30469159cc3d358f66a, type: 2}
+  - {fileID: 11400000, guid: 17d92054c4272744da0c839e1e7ba072, type: 2}
   - {fileID: 11400000, guid: 756ed0318746c3a478360d1e0cd6b871, type: 2}
   - {fileID: 11400000, guid: fcc38c786af2ba244ab2a42820f656f7, type: 2}
-  cornerPropPlacementChance: 0.7
+  cornerPropPlacementChance: 0.157
   propPrefab: {fileID: 2542449071796804383, guid: 60e058bf199bd3741aff97d6533b456b, type: 3}
   OnFinished:
     m_PersistentCalls:
@@ -13710,6 +13717,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  max: 0
 --- !u!4 &1870380332
 Transform:
   m_ObjectHideFlags: 0
@@ -13773,8 +13781,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 3137872022249315039, guid: bdb9a65addf1ba347b9358d78b07934c, type: 3}
   playerRoomIndex: 0
   vCamera: {fileID: 189883101}
-  roomEnemiesCount: 010000000200000003000000
-  showGizmo: 1
+  roomEnemiesCount: 010000000100000001000000
+  showGizmo: 0
 --- !u!1 &1962582462
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,9 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PropSprite: {fileID: 1943428218, guid: e63597f9a0b838e49b8c8fca4dcad948, type: 3}
   PropSize: {x: 1, y: 1}
-  Inner: 1
-  PlacementQuantityMin: 1
-  PlacementQuantityMax: 1
+  Inner: 0
+  PlacementPerRoomsMin: 1
+  PlacementPerRoomsMax: 1
+  MaxAmount: 0
   PlaceAsGroup: 0
   GroupMinCount: 1
   GroupMaxCount: 1
+  Enemy: 0
+  enemyName: 
+  hp: 0
+  minDamage: 0
+  maxDamage: 0
+  healPotion: 0
+  skillPotion: 0
+  healAmount: 0
+  weapon: 0
+  weaponName: 
+  weaponDamage: 0
