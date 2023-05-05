@@ -105,7 +105,7 @@ MonoBehaviour:
   dest: {x: 0, y: 0}
   movePixel: 1
   moveRatio: 0
-  moveSpeedPerFrame: 0.001
+  moveSpeedPerFrame: 0.01
 --- !u!50 &5449907468470402504
 Rigidbody2D:
   serializedVersion: 4

@@ -43,14 +43,6 @@ public class Character : MonoBehaviour
                 }
                 moveRatio += moveSpeedPerFrame;
             }
-
-
-            Vector2 next = transform.position + new Vector3(x, y, 0);
-            RaycastHit2D cantGo = Physics2D.Raycast(next, next);
-            if (cantGo)
-            {
-                Debug.Log(cantGo.transform.gameObject.name + ": " + gameObject.name);
-            }
         }
         else if (moveRatio < 1f)
         {
@@ -61,7 +53,12 @@ public class Character : MonoBehaviour
         if (rb.position == dest || moveRatio >= 1f)
         {
             moveRatio = 0f;
-            transform.position = new Vector2(Mathf.Round(transform.position.x * 10) * 0.1f, Mathf.Round(transform.position.y * 10) * 0.1f);
+            transform.position = new Vector2(Mathf.Floor(transform.position.x) + 0.5f, Mathf.Floor(transform.position.y) + 0.5f);
+
+            if((transform.position.x*10)%10 > 5)
+            {
+
+            }
             StartCoroutine(StopMove());
         }
     }
@@ -69,7 +66,7 @@ public class Character : MonoBehaviour
     IEnumerator StopMove()
     {
         canMove = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         canMove = true;
     }
 }

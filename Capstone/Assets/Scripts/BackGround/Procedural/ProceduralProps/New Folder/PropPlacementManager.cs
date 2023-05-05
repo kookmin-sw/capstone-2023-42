@@ -301,6 +301,7 @@ public class PropPlacementManager : MonoBehaviour
         CapsuleCollider2D collider 
             = propSpriteRenderer.gameObject.AddComponent<CapsuleCollider2D>();
         collider.offset = Vector2.zero;
+        collider.isTrigger = true;
         if(propToPlace.PropSize.x > propToPlace.PropSize.y)
         {
             collider.direction = CapsuleDirection2D.Horizontal;
