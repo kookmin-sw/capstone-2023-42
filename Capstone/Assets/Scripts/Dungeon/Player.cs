@@ -12,4 +12,8 @@ public class Player : Character
     private void OnCollisionEnter(Collision other) {
         Debug.Log(other.gameObject.name);
     }
+
+    [Header("Prop data:")]
+    public int HP = 0;
+    public int Atack = 0;
 }

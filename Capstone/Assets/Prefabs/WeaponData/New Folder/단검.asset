@@ -15,9 +15,10 @@ MonoBehaviour:
   PropSprite: {fileID: 1599060374, guid: cffdbb5a4ec4082458e2405012b16708, type: 3}
   PropSize: {x: 1, y: 1}
   Inner: 1
-  PlacementPerRoomsMin: 0
+  PlacementPerRoomsMin: 1
   PlacementPerRoomsMax: 1
-  MaxAmount: 0
+  MaxAmount: 2
+  count: 0
   PlaceAsGroup: 0
   GroupMinCount: 1
   GroupMaxCount: 1
