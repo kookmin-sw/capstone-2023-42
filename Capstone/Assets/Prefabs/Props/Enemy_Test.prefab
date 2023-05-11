@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1538025655209159894}
   m_Layer: 0
   m_Name: Enemy_Test
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1af9d5d65cd4677ac24aca24cd7c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   rb: {fileID: 2742873575729785146}
   canMove: 1
   direction: {x: 0, y: 0}
@@ -106,6 +107,7 @@ MonoBehaviour:
   movePixel: 1
   moveRatio: 0
   moveSpeedPerFrame: 0.01
+  enemyTurn: 0
 --- !u!50 &2742873575729785146
 Rigidbody2D:
   serializedVersion: 4
