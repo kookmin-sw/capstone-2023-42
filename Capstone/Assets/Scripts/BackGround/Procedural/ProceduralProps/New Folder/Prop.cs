@@ -20,6 +20,8 @@ public class Prop : ScriptableObject
     public int PlacementPerRoomsMax = 1;
     [Min(0)]
     public int MaxAmount;
+    [Min(0)]
+    public int count;
 
     [Space, Header("Group placement:")]
     public bool PlaceAsGroup = false;
@@ -45,6 +47,9 @@ public class Prop : ScriptableObject
     public bool weapon = false;
     public string weaponName;
     public int weaponDamage;
+
+    [Space, Header("Exit:")]
+    public bool exit = false;
 
 
 }

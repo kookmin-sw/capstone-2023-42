@@ -20,8 +20,14 @@ public class PropPlacementManager : MonoBehaviour
 
     public UnityEvent OnFinished;
     
+    
     public int max = 0;
-
+    public void Start(){
+        foreach(Prop propClear in propsToPlace)
+        {
+            propClear.count = 0;
+        }
+    }
     private void Awake()
     {
         dungeonData = FindObjectOfType<DungeonData>();
@@ -73,23 +79,27 @@ public class PropPlacementManager : MonoBehaviour
         //We will try to place all the props
         foreach (Prop propToPlace in wallProps)
         {
+            
             //We want to place only certain quantity of each prop
             int quantity 
                 = UnityEngine.Random.Range(propToPlace.PlacementPerRoomsMin, propToPlace.PlacementPerRoomsMax +1);
             
             for (int i = 0; i < quantity; i++)
             {   
-                if(max == propToPlace.MaxAmount)
+                if(propToPlace.count == propToPlace.MaxAmount)
                     break;
                 //remove taken positions
-                tempPositons.ExceptWith(room.PropPositions);
-                //shuffel the positions
-                List<Vector2Int> availablePositions = tempPositons.OrderBy(x => Guid.NewGuid()).ToList();
-                //If placement has failed there is no point in trying to place the same prop again
-                if (TryPlacingPropBruteForce(room, propToPlace, availablePositions, placement) == false)
-                    break;
-                max++;
-                Debug.Log(max);
+                else
+                {
+                    tempPositons.ExceptWith(room.PropPositions);
+                    //shuffel the positions
+                    List<Vector2Int> availablePositions = tempPositons.OrderBy(x => Guid.NewGuid()).ToList();
+                    //If placement has failed there is no point in trying to place the same prop again
+                    if (TryPlacingPropBruteForce(room, propToPlace, availablePositions, placement) == false)
+                        break;
+                    propToPlace.count++;
+                    Debug.Log(propToPlace.count + " : " + propToPlace + " : MaxAmount - " + propToPlace.MaxAmount);
+                }
             }
 
         }
@@ -296,6 +306,8 @@ public class PropPlacementManager : MonoBehaviour
     {
         //Instantiat the prop at this positon
         GameObject prop = Instantiate(propPrefab);
+        ItemInfo itemInfo = prop.GetComponent<ItemInfo>();
+        itemInfo.propInfo = propToPlace;
         SpriteRenderer propSpriteRenderer = prop.GetComponentInChildren<SpriteRenderer>();
         
         

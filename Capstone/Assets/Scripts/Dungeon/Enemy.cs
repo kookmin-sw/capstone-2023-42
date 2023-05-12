@@ -10,4 +10,11 @@ public class Enemy : Character
         float y = Random.Range(-1,2);
         Move(x,y);
     }
+
+    [Header("Info")]
+    public string enemyName;
+    public int hp;
+    public int minDamage;
+    public int maxDamage;
+
 }
