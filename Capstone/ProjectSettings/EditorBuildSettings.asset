@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BackGround_Test.unity
     guid: 594da7912e6320f418cbce008fec2a64
-  - enabled: 1
-    path: Assets/Scenes/CombatScene.unity
-    guid: c3a30c5c6afd7438eba3ccdb0148429e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/DungeonScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d1ddc37c31191fe43be841ed9c6cea0c
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 34d6185e6c3433946bced6843a29db37
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 2ac4da3e7165a4735ac3b06f11a2a322
   m_configObjects: {}
