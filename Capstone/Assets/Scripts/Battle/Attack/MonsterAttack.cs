@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterAttack : MonoBehaviour
 {
@@ -26,10 +27,11 @@ public class MonsterAttack : MonoBehaviour
                 Debug.Log("Player is dead");
                 //end
                 mflag = 1;
+                //GameOver∑Œ ¿Ãµø
+                SceneManager.LoadScene("GameOver");
             }
             Debug.Log("Player's HP is " + PlayerAttack.instance.PlayerHP);
-        }
-
+        }        
     }
 
     // Start is called before the first frame update

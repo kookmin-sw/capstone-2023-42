@@ -51,12 +51,6 @@ public class AgentPlacer : MonoBehaviour
             //Positions that we can reach + path == positions where we can place enemies
             room.PositionsAccessibleFromPath = roomMap.Keys.OrderBy(x => Guid.NewGuid()).ToList();
 
-            //did we add this room to the roomEnemiesCount list?
-            if(roomEnemiesCount.Count > i)
-            {
-                PlaceEnemies(room, roomEnemiesCount[i]);
-            }
-
             //Place the player
             if(i==playerRoomIndex)
             {
@@ -67,6 +61,12 @@ public class AgentPlacer : MonoBehaviour
                 vCamera.Follow = player.transform;
                 vCamera.LookAt = player.transform;
                 dungeonData.PlayerReference = player;
+            }
+
+            //did we add this room to the roomEnemiesCount list?
+            if(roomEnemiesCount.Count > i)
+            {
+                PlaceEnemies(room, roomEnemiesCount[i]);
             }
         }
     }
@@ -91,6 +91,8 @@ public class AgentPlacer : MonoBehaviour
 
             
             room.EnemiesInTheRoom.Add(enemy);
+
+            Player.instance.enemyList.Add(enemy.GetComponent<Enemy>());
         }
     }
 
