@@ -19,12 +19,14 @@ public class PMAttack : MonoBehaviour
 
     IEnumerator twoStep()
     {
+        AttackButton.instance.attButton.enabled = false;
         //if (Input.GetKeyDown(KeyCode.Space))
         PlayerAttack.instance.PAttack();
         yield return new WaitForSeconds(1);
         MonsterAttack.instance.MAttack();
         yield return new WaitForSeconds(1);
         AttackButton.instance.AButton = 0;
+        AttackButton.instance.attButton.enabled = true;
     }
 
     public void Attack()

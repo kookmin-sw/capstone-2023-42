@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AttackButton : MonoBehaviour
 {
-    Button attButton;
+    public Button attButton;
     public static AttackButton instance;
     public int AButton = 0;
     
