@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class PlayerAttack : MonoBehaviour
                     Debug.Log("Monster is dead");
                     //end
                     pflag = 1;
+                    //∏ ¿∏∑Œ ¿Ãµø
+                    SceneManager.LoadScene("MainScene");
                 }
 
                 Debug.Log("Monster's HP is " + MonsterAttack.instance.MonsterHP);

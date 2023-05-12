@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public enum State
+    {
+        gameStart,moveStart, moving, moveFinish
+    }
+    public State state;
     public Rigidbody2D rb;
     public bool canMove = true;
     public Vector2 direction;
@@ -14,10 +19,11 @@ public class Character : MonoBehaviour
 
     void Start()
     {
+        state = State.gameStart;
         rb = GetComponent<Rigidbody2D>();
     }
 
-    protected void Move(float x, float y)
+    protected virtual void Move(float x, float y)
     {
         if (!canMove)
             return;
@@ -30,6 +36,7 @@ public class Character : MonoBehaviour
 
         if (moveRatio == 0f)
         {
+            
             if (x != 0 || y != 0)
             {
                 direction = new Vector2(x, y) * movePixel;
@@ -42,23 +49,22 @@ public class Character : MonoBehaviour
                     dest = transform.position + Vector3.up * direction.y;
                 }
                 moveRatio += moveSpeedPerFrame;
+
+                state = State.moveStart;
             }
         }
         else if (moveRatio < 1f)
         {
             rb.MovePosition(Vector3.Lerp(transform.position, dest, moveRatio));
             moveRatio += moveSpeedPerFrame;
+            state = State.moving;
         }
 
         if (rb.position == dest || moveRatio >= 1f)
         {
             moveRatio = 0f;
             transform.position = new Vector2(Mathf.Floor(transform.position.x) + 0.5f, Mathf.Floor(transform.position.y) + 0.5f);
-
-            if((transform.position.x*10)%10 > 5)
-            {
-
-            }
+            state = State.moveFinish;
             StartCoroutine(StopMove());
         }
     }
