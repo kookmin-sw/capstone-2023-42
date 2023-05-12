@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b1fd2e91c8ac940bd9982f316100a2, type: 3}
-  m_Name: HP_L
+  m_Name: Exit
   m_EditorClassIdentifier: 
-  PropSprite: {fileID: 1489581867, guid: e63597f9a0b838e49b8c8fca4dcad948, type: 3}
+  PropSprite: {fileID: 21300000, guid: 5955491dc8dcecb4a993d9a008cf65a7, type: 3}
   PropSize: {x: 1, y: 1}
   Inner: 1
   PlacementPerRoomsMin: 1
   PlacementPerRoomsMax: 1
-  MaxAmount: 0
-  count: 0
+  MaxAmount: 1
+  count: 1
   PlaceAsGroup: 0
   GroupMinCount: 1
   GroupMaxCount: 1
@@ -33,3 +33,4 @@ MonoBehaviour:
   weapon: 0
   weaponName: 
   weaponDamage: 0
+  exit: 1
