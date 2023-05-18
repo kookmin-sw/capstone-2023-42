@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
         gameStart,moveStart, moving, moveFinish
     }
     public State state;
+    public Animator animator;
     public Rigidbody2D rb;
     public bool canMove = true;
     public Vector2 direction;
@@ -21,6 +22,7 @@ public class Character : MonoBehaviour
     {
         state = State.gameStart;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected virtual void Move(float x, float y)
@@ -58,6 +60,7 @@ public class Character : MonoBehaviour
             rb.MovePosition(Vector3.Lerp(transform.position, dest, moveRatio));
             moveRatio += moveSpeedPerFrame;
             state = State.moving;
+            //animator.SetTrigger("Run");
         }
 
         if (rb.position == dest || moveRatio >= 1f)
@@ -66,6 +69,7 @@ public class Character : MonoBehaviour
             transform.position = new Vector2(Mathf.Floor(transform.position.x) + 0.5f, Mathf.Floor(transform.position.y) + 0.5f);
             state = State.moveFinish;
             StartCoroutine(StopMove());
+            //animator.SetTrigger("Idle");
         }
     }
 

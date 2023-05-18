@@ -33,7 +33,16 @@ public class Player : Character
 
     protected override void Move(float x, float y)
     {
+        if(x < 0)
+        {
+            transform.right = new Vector3(-1,0,0);
+        }
+        else if(x > 0)
+        {
+            transform.right = new Vector3(1,0,0);
+        }
         base.Move(x, y);
+        transform.position = new Vector3(transform.position.x,transform.position.y, -1);
     }
 
     public bool CheckEnemyTurnFinish()
