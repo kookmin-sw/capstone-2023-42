@@ -10,6 +10,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] public int PlayerSP = 50;
     public int pflag = 0;
 
+    public GameObject win;
+
     void Awake()
     {
         instance = this;
@@ -19,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(pflag == 0)
         {
-            //³²Àº sp¶û °ø°Ý¿¡ ÇÊ¿äÇÑ spºñ±³ÇØ¼­ °ø°ÝÀÌ °¡´ÉÇÑÁö ÆÇ´Ü
+            //ï¿½ï¿½ï¿½ï¿½ spï¿½ï¿½ ï¿½ï¿½ï¿½Ý¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ spï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½
             //PlayerSP-=attackSP;
             if (PlayerSP <= 0)
             {
@@ -37,8 +39,9 @@ public class PlayerAttack : MonoBehaviour
                     Debug.Log("Monster is dead");
                     //end
                     pflag = 1;
-                    //¸ÊÀ¸·Î ÀÌµ¿
-                    SceneManager.LoadScene("MainScene");
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+                    // SceneManager.LoadScene("BackGround_Test");
+                    win.SetActive(false);
                 }
 
                 Debug.Log("Monster's HP is " + MonsterAttack.instance.MonsterHP);

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propInfo: {fileID: 0}
+  exitConfirm: {fileID: 6198522722334149510, guid: b5c41f8612f2ec1478f8ebf712fdbcfe, type: 3}
 --- !u!61 &-1249858043346819869
 BoxCollider2D:
   m_ObjectHideFlags: 0

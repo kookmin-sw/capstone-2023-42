@@ -7,6 +7,12 @@ public class Enemy : Character
     public static Enemy instance;
     public bool enemyTurn = false;
 
+    // public GameObject Battle;
+
+    // public void openBattle(){
+    //     Battle.SetActive(true);
+    // }
+
     private void Awake()
     {
         enemyTurn = false;
