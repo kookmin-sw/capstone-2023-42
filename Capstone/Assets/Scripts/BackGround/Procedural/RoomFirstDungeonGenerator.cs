@@ -18,8 +18,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     private int offset = 1;
     [SerializeField]
     private bool randomWalkRooms = false;
-    [SerializeField]
-    public bool mapchange = false;
     
     // [SerializeField]
     // private InputActionReference generate;
@@ -48,10 +46,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     void Start()
     {
         // RunProceduralGeneration();
-        if(mapchange == false){
-            GenerateDungeon();
-            mapchange = true;
-        }
+        GenerateDungeon();
     }
 
     protected override void RunProceduralGeneration()
