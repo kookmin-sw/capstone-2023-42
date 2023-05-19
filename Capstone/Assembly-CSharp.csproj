@@ -60,6 +60,7 @@
      <Compile Include="Assets/Scripts/BackGround/Map_Test/RoomSpawner.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/New Folder/RoomDataExtractor.cs" />
      <Compile Include="Assets/Scripts/BackGround/CollisionHandler.cs" />
+     <Compile Include="Assets/HardLight2D/Demo/DemoScripts/MeshCopy.cs" />
      <Compile Include="Assets/Scripts/MainMenu/LoadingSceneManager.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/TilemapVisualizer.cs" />
      <Compile Include="Assets/Scripts/Battle/bar/HPslider.cs" />
@@ -74,8 +75,10 @@
      <Compile Include="Assets/Scripts/GameOver/HomeButton.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralGenerationAlgorithms.cs" />
      <Compile Include="Assets/Scripts/Battle/Attack/MonsterAttack.cs" />
+     <Compile Include="Assets/HardLight2D/Demo/DemoScripts/Speen.cs" />
      <Compile Include="Assets/Scripts/BackGround/Map_Test/AddRoom.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/New Folder/SimpleDungeonGenerator.cs" />
+     <Compile Include="Assets/HardLight2D/Demo/DemoScripts/PolyWobbler.cs" />
      <Compile Include="Assets/Scripts/Battle/Attack/RandomDice.cs" />
      <Compile Include="Assets/Scripts/Battle/Button/ItemListButton.cs" />
      <Compile Include="Assets/Scripts/Dungeon/Enemy.cs" />
@@ -89,9 +92,6 @@
      <Compile Include="Assets/Scripts/BackGround/Procedural/CorridorFirstDungeonGenerator.cs" />
      <Compile Include="Assets/Scripts/Battle/Text/PlayerHp.cs" />
      <Compile Include="Assets/Scripts/BackGround/PropInfo.cs" />
-     <Compile Include="Assets/HardLight2D/Demo/DemoScripts/MeshCopy.cs" />
-     <Compile Include="Assets/HardLight2D/Demo/DemoScripts/Speen.cs" />
-     <Compile Include="Assets/HardLight2D/Demo/DemoScripts/PolyWobbler.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/HardLight2D/ReadMe - FAQ.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -374,14 +374,14 @@
     <Reference Include="Unity.Burst.Cecil">
         <HintPath>/Users/choejiwon/project/capstone-2023-42/Capstone/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-        <HintPath>/Users/choejiwon/project/capstone-2023-42/Capstone/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+    <Reference Include="HardLight2D">
+        <HintPath>/Users/choejiwon/project/capstone-2023-42/Capstone/Assets/HardLight2D/Scripts/HardLight2D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>/Users/choejiwon/project/capstone-2023-42/Capstone/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="HardLight2D">
-        <HintPath>/Users/choejiwon/project/capstone-2023-42/Capstone/Assets/HardLight2D/Scripts/HardLight2D.dll</HintPath>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+        <HintPath>/Users/choejiwon/project/capstone-2023-42/Capstone/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
