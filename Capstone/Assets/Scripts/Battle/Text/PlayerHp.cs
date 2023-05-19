@@ -20,8 +20,9 @@ public class PlayerHp : MonoBehaviour
     {
         //스크립트 담을변수이름 = GameObject.Find("스크립트포함한오브젝트이름").GetComponent<스크립트이름>();
         //담은변수.가져올변수명 으로 사용
-        PlayerAttack Instance = GameObject.Find("Player").GetComponent<PlayerAttack>();
-        HP.text = Instance.PlayerHP.ToString();
+        //PlayerAttack Instance = GameObject.Find("Player").GetComponent<PlayerAttack>();
+        //HP.text = Instance.PlayerHP.ToString();
+        HP.text = PlayerAttack.instance.PlayerHP.ToString();
         //HP.text = "Player HP";
     }
 }

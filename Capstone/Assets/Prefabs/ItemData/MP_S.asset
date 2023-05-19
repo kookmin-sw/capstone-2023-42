@@ -28,8 +28,9 @@ MonoBehaviour:
   minDamage: 0
   maxDamage: 0
   healPotion: 0
-  skillPotion: 0
+  skillPotion: 1
   healAmount: 0
   weapon: 0
   weaponName: 
   weaponDamage: 0
+  exit: 0

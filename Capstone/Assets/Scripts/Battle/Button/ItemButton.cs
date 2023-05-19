@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemListButton : MonoBehaviour
+public class ItemButton : MonoBehaviour
 {
     Button attButton;
-    public static ItemListButton instance;
-    public int AButton = 0;
+    public static ItemButton instance;
+    [SerializeField] public int ButtonNum = 0;
 
     void Awake()
     {
@@ -16,7 +16,7 @@ public class ItemListButton : MonoBehaviour
 
     public void OnClickButton()
     {
-
+        Item.instance.selectItem = ButtonNum;
     }
 
     // Start is called before the first frame update
@@ -29,6 +29,6 @@ public class ItemListButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
