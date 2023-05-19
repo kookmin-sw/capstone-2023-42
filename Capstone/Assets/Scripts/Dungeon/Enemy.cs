@@ -6,6 +6,7 @@ public class Enemy : Character
 {
     public static Enemy instance;
     public bool enemyTurn = false;
+    bool isTurn = false;
 
     private void Awake()
     {
@@ -21,14 +22,25 @@ public class Enemy : Character
             Move(x, y);
         }
 
-        if(state == State.moveFinish)
+        if (state == State.moveFinish)
         {
             enemyTurn = false;
+            isTurn = false;
         }
     }
 
     protected override void Move(float x, float y)
     {
+        if (!isTurn && x < 0)
+        {
+            transform.right = new Vector3(-1, 0, 0);
+            isTurn = true;
+        }
+        else if (!isTurn && x > 0)
+        {
+            transform.right = new Vector3(1, 0, 0);
+            isTurn = true;
+        }
         base.Move(x, y);
     }
 
