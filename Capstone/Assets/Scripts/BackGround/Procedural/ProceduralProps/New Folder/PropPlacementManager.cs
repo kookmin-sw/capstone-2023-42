@@ -98,7 +98,7 @@ public class PropPlacementManager : MonoBehaviour
                     if (TryPlacingPropBruteForce(room, propToPlace, availablePositions, placement) == false)
                         break;
                     propToPlace.count++;
-                    Debug.Log(propToPlace.count + " : " + propToPlace + " : MaxAmount - " + propToPlace.MaxAmount);
+                    // Debug.Log(propToPlace.count + " : " + propToPlace + " : MaxAmount - " + propToPlace.MaxAmount);
                 }
             }
 
