@@ -12,9 +12,6 @@ public class Prop : ScriptableObject
     /// </summary>
     public Vector2Int PropSize = Vector2Int.one;
 
-    [Space, Header("Item Name")]
-    public string itemName;
-
     [Space, Header("Placement type:")]
     public bool Inner = true;
     [Min(0)]

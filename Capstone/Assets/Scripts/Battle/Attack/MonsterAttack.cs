@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MonsterAttack : MonoBehaviour
 {
     public static MonsterAttack instance;
-    [SerializeField] public int MonsterHP = 100;
+    public int MonsterHP = 100;
     public int mflag = 0;
 
     public GameObject EnemyObj;

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cancle
+      name: Interface_15
       rect:
         serializedVersion: 2
         x: 42
@@ -589,7 +589,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cancle: 528111544
       Interface_0: -796533758
       Interface_1: 607938867
       Interface_10: -632596690
@@ -597,6 +596,7 @@ TextureImporter:
       Interface_12: 1300029776
       Interface_13: -873635438
       Interface_14: 32778802
+      Interface_15: 528111544
       Interface_16: 2034366845
       Interface_17: -949960946
       Interface_18: -2127084387
