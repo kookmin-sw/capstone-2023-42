@@ -28,11 +28,11 @@ public class ItemInfo : MonoBehaviour
             }
             
             else{
-                GameObject invenWin = GameObject.FindGameObjectWithTag("Inven");
+                // GameObject invenWin = GameObject.FindGameObjectWithTag("Inven");
                 GameObject invenObj = GameObject.Find("Inventory");
-                if(invenWin != null)
-                    Debug.Log("invenWin not null");
-                invenWin.SetActive(true);
+                if(invenObj== null)
+                    Debug.Log("invenObj null");
+                // invenWin.SetActive(true);
                 Inventory test = invenObj.GetComponent<Inventory>();
                 test.AcquireItem(propInfo);
                 Destroy(gameObject);

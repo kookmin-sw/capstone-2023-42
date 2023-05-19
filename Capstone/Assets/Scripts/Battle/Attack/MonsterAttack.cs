@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class MonsterAttack : MonoBehaviour
 {
     public static MonsterAttack instance;
-    [SerializeField] public int MonsterHP = 100;
+    [SerializeField] 
+    public int MonsterHP = 100;
     public int mflag = 0;
+
+    public GameObject EnemyObj;
+    // public Enemy MAEnemyCS;
+    public Enemy MaOriginEnemy;
+    
 
     void Awake()
     {
@@ -19,7 +25,7 @@ public class MonsterAttack : MonoBehaviour
         if(mflag == 0)
         {
             RandomDice.instance.Roll();
-            PlayerAttack.instance.PlayerHP -= (30 + RandomDice.instance.result * 10);
+            PlayerAttack.instance.PlayerCS.HP -= (30 + RandomDice.instance.result * 10);
             Debug.Log("Monster Attack");
             if (PlayerAttack.instance.PlayerHP <= 0)
             {
@@ -27,7 +33,7 @@ public class MonsterAttack : MonoBehaviour
                 Debug.Log("Player is dead");
                 //end
                 mflag = 1;
-                //GameOver·Î ÀÌµ¿
+                //GameOverï¿½ï¿½ ï¿½Ìµï¿½
                 SceneManager.LoadScene("GameOver");
             }
             Debug.Log("Player's HP is " + PlayerAttack.instance.PlayerHP);
@@ -43,6 +49,14 @@ public class MonsterAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(MaOriginEnemy != null){
+            PlayerAttack.instance.OriginEnemy = MaOriginEnemy;
+            // MonsterHP = OriginEnemy.hp;
+        }
     }
+
+    // public void setMonsterHP(){
+    //     if(MAEnemyCS != null)
+    //         MAEnemyCS.hp = MonsterHP;
+    // }
 }

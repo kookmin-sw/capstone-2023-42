@@ -20,7 +20,7 @@ public class MonsterHPslider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nowHp = MonsterAttack.instance.MonsterHP;
+        nowHp = MonsterAttack.instance.MaOriginEnemy.hp;
         nowHpbar.fillAmount = (float)nowHp / (float)maxHp;
     }
 }

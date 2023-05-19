@@ -108,9 +108,8 @@ MonoBehaviour:
   moveRatio: 0
   moveSpeedPerFrame: 0.01
   enemyTurn: 0
-  Battle: {fileID: 0}
   enemyName: 
-  hp: 0
+  hp: 300
   minDamage: 0
   maxDamage: 0
 --- !u!50 &2742873575729785146

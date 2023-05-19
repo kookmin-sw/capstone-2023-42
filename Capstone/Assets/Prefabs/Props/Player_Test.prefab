@@ -109,9 +109,13 @@ MonoBehaviour:
   moveSpeedPerFrame: 0.01
   playerTurn: 1
   enemyList: []
-  Battle: {fileID: 0}
-  HP: 10
+  EnemyObj: {fileID: 0}
+  EnemySC: {fileID: 0}
+  MAObj: {fileID: 0}
+  MASC: {fileID: 0}
+  HP: 300
   Atack: 10
+  SP: 0
 --- !u!50 &5449907468470402504
 Rigidbody2D:
   serializedVersion: 4
