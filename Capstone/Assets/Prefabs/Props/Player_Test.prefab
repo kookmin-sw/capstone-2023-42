@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c23cc69663f47399f28f75b3570d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   rb: {fileID: 5449907468470402504}
   canMove: 1
   direction: {x: 0, y: 0}
@@ -107,6 +108,8 @@ MonoBehaviour:
   movePixel: 1
   moveRatio: 0
   moveSpeedPerFrame: 0.01
+  playerTurn: 1
+  enemyList: []
   HP: 10
   Atack: 10
 --- !u!50 &5449907468470402504
