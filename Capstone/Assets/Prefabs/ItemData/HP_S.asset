@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PropSprite: {fileID: 1943428218, guid: e63597f9a0b838e49b8c8fca4dcad948, type: 3}
   PropSize: {x: 1, y: 1}
-  itemName: 
   Inner: 0
   PlacementPerRoomsMin: 1
   PlacementPerRoomsMax: 1
