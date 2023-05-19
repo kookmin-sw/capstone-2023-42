@@ -6,6 +6,10 @@ TagManager:
   tags:
   - SpawnPoint
   - Enemy
+  - ItemButton
+  - Exit
+  - Battle
+  - Inven
   layers:
   - Default
   - TransparentFX
@@ -45,4 +49,7 @@ TagManager:
     locked: 0
   - name: Corridor
     uniqueID: 4245425087
+    locked: 0
+  - name: Front
+    uniqueID: 796411973
     locked: 0
