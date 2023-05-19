@@ -18,6 +18,6 @@ public class MonsterHp : MonoBehaviour
     void Update()
     {
         MonsterAttack Instance = GameObject.Find("Monster").GetComponent<MonsterAttack>();
-        HP.text = Instance.MonsterHP.ToString();
+        HP.text = Instance.EnemySC.hp.ToString();
     }
 }
