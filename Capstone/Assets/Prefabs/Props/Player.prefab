@@ -13,9 +13,12 @@ GameObject:
   - component: {fileID: 5570014806928615551}
   - component: {fileID: 5449907468470402504}
   - component: {fileID: 8779391106804201919}
+<<<<<<< HEAD:Capstone/Assets/Prefabs/Props/Player.prefab
   - component: {fileID: -4301331965911014349}
   - component: {fileID: 2209505576026972656}
   - component: {fileID: 2961207002915109442}
+=======
+>>>>>>> JiHun:Capstone/Assets/Prefabs/Props/Player_Test.prefab
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -112,8 +115,17 @@ MonoBehaviour:
   moveSpeedPerFrame: 0.01
   playerTurn: 1
   enemyList: []
+<<<<<<< HEAD:Capstone/Assets/Prefabs/Props/Player.prefab
   HP: 10
+=======
+  EnemyObj: {fileID: 0}
+  EnemySC: {fileID: 0}
+  MAObj: {fileID: 0}
+  MASC: {fileID: 0}
+  HP: 300
+>>>>>>> JiHun:Capstone/Assets/Prefabs/Props/Player_Test.prefab
   Atack: 10
+  SP: 0
 --- !u!50 &5449907468470402504
 Rigidbody2D:
   serializedVersion: 4
@@ -161,6 +173,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+<<<<<<< HEAD:Capstone/Assets/Prefabs/Props/Player.prefab
 --- !u!114 &-4301331965911014349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,3 +268,5 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+=======
+>>>>>>> JiHun:Capstone/Assets/Prefabs/Props/Player_Test.prefab

@@ -110,7 +110,11 @@ MonoBehaviour:
   moveSpeedPerFrame: 0.01
   enemyTurn: 0
   enemyName: 
+<<<<<<< HEAD:Capstone/Assets/Prefabs/Props/Enemy.prefab
   hp: 0
+=======
+  hp: 300
+>>>>>>> JiHun:Capstone/Assets/Prefabs/Props/Enemy_Test.prefab
   minDamage: 0
   maxDamage: 0
 --- !u!50 &2742873575729785146
