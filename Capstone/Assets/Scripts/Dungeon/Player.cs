@@ -9,20 +9,9 @@ public class Player : Character
     public bool playerTurn = true;
     public List<Enemy> enemyList = new List<Enemy>();
 
-    // [SerializeField]
-    // private GameObject Battle;
-    private GameObject battleCan;
-    public GameObject EnemyObj;
-    public Enemy EnemySC;
-    public GameObject MAObj;
-    public MonsterAttack MASC;
-
     private void Awake()
     {
         instance = this;
-        battleCan = GameObject.Find("Battle Canvas");
-        MAObj = GameObject.Find("Monster");
-        MASC = MAObj.GetComponent<MonsterAttack>();
     }
     void Update()
     {
@@ -81,29 +70,11 @@ public class Player : Character
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            // GameObject Battle = GameObject.FindWithTag("Battle");
-            EnemySC = other.gameObject.GetComponent<Enemy>();
-            enemySetup();
-            GameObject Battle = battleCan.transform.Find("BackGroundImage").gameObject;
-            Battle.SetActive(true);
-            // SceneManager.LoadScene("Battle");
+            SceneManager.LoadScene("Battle");
         }
-    }
-
-    public void enemySetup(){
-        MASC.MonsterHP = EnemySC.hp;
-        // MASC.EnemyObj = MAObj;
-        // MASC.MAEnemyCS = EnemySC;
-        MASC.MaOriginEnemy = EnemySC;
-        // MASC.PlayerCS = this;
-    }
-
-    public void test(){
-        
     }
 
     [Header("Prop data:")]
     public int HP = 0;
     public int Atack = 0;
-    public int SP = 0;
 }
