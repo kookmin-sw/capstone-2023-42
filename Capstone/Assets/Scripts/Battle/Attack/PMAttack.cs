@@ -23,11 +23,8 @@ public class PMAttack : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Space))
         PlayerAttack.instance.PAttack();
         yield return new WaitForSeconds(1);
-        if(PlayerAttack.instance.pflag == 1)
-        {
-            MonsterAttack.instance.MAttack();
-            yield return new WaitForSeconds(1);
-        }        
+        MonsterAttack.instance.MAttack();
+        yield return new WaitForSeconds(1);
         AttackButton.instance.AButton = 0;
         AttackButton.instance.attButton.enabled = true;
     }
