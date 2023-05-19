@@ -2646,13 +2646,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI books & more_121
+      name: nameBlock
       rect:
         serializedVersion: 2
         x: 16
-        y: 128
-        width: 128
-        height: 96
+        y: 192
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5118,7 +5118,6 @@ TextureImporter:
       UI books & more_119: -1468225904
       UI books & more_12: -1371038617
       UI books & more_120: -774851764
-      UI books & more_121: -1718623786
       UI books & more_122: 616430025
       UI books & more_123: -45466900
       UI books & more_124: -882973604
@@ -5329,6 +5328,7 @@ TextureImporter:
       UI books & more_97: 671013135
       UI books & more_98: -868642356
       UI books & more_99: -1007255674
+      nameBlock: -1718623786
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
