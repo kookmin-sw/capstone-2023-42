@@ -9,9 +9,14 @@ public class Player : Character
     public bool playerTurn = true;
     public List<Enemy> enemyList = new List<Enemy>();
 
+    // [SerializeField]
+    // private GameObject Battle;
+    private GameObject battleCan;
+
     private void Awake()
     {
         instance = this;
+        battleCan = GameObject.Find("Battle Canvas");
     }
     void Update()
     {
@@ -61,7 +66,10 @@ public class Player : Character
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            SceneManager.LoadScene("Battle");
+            // GameObject Battle = GameObject.FindWithTag("Battle");
+            GameObject Battle = battleCan.transform.Find("BackGroundImage").gameObject;
+            Battle.SetActive(true);
+            // SceneManager.LoadScene("Battle");
         }
     }
 

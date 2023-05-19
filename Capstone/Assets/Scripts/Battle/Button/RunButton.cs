@@ -17,7 +17,7 @@ public class RunButton : MonoBehaviour
 
     public void OnClickButton()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("BackGround_Test");
     }
 
     // Start is called before the first frame update
