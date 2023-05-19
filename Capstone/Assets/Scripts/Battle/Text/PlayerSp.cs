@@ -16,9 +16,9 @@ public class PlayerSp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ = GameObject.Find("ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¿ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½Ì¸ï¿½").GetComponent<ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½Ì¸ï¿½>();
-        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        //½ºÅ©¸³Æ® ´ãÀ»º¯¼öÀÌ¸§ = GameObject.Find("½ºÅ©¸³Æ®Æ÷ÇÔÇÑ¿ÀºêÁ§Æ®ÀÌ¸§").GetComponent<½ºÅ©¸³Æ®ÀÌ¸§>();
+        //´ãÀºº¯¼ö.°¡Á®¿Ãº¯¼ö¸í À¸·Î »ç¿ë
         PlayerAttack Instance = GameObject.Find("Player").GetComponent<PlayerAttack>();
-        SP.text = Instance.PlayerSC.SP.ToString();
+        SP.text = Instance.PlayerSP.ToString();
     }
 }

@@ -7,13 +7,12 @@ public class PlayerAttack : MonoBehaviour
 {
     public static PlayerAttack instance;
     [SerializeField] public int PlayerHP = 100;
-    [SerializeField] public int PlayerSP = 50;
-    public int pflag = 0;
-
-    public GameObject win;
-
-    public GameObject PlayerObj;
-    public Player PlayerSC;
+    [SerializeField] public int PlayerSP = 100;
+    public int AttackAmount = 10;
+    public int HealAmount = 30;
+    //public int itemType = 0; // 0: weapon, 1: healPotion, 2: skillPotion
+    public int pflag = 0; // Player°¡ °ø°ÝÀ» Çß´ÂÁö Ã¼Å©
+    int p;
 
     void Awake()
     {
@@ -22,46 +21,71 @@ public class PlayerAttack : MonoBehaviour
 
     public void PAttack()
     {
-        if(pflag == 0)
+        pflag = 0;
+        Debug.Log("ItemType is " + ItemProp.instance.itemType);
+        if (ItemProp.instance.itemType == 0)
         {
-            //ï¿½ï¿½ï¿½ï¿½ spï¿½ï¿½ ï¿½ï¿½ï¿½Ý¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ spï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½
-            //PlayerSP-=attackSP;
+            //³²Àº sp¶û °ø°Ý¿¡ ÇÊ¿äÇÑ spºñ±³ÇØ¼­ °ø°ÝÀÌ °¡´ÉÇÑÁö ÆÇ´Ü
+            //PlayerSP -= attackSP;
+            PlayerSP -= 30;
             if (PlayerSP <= 0)
             {
                 Debug.Log("SP is not enough");
-                //PlayerSP+=attackSP;
+                //PlayerSP += attackSP;
+                PlayerSP += 30;
             }
             else
             {
                 RandomDice.instance.Roll();
-                MonsterAttack.instance.EnemySC.hp -= (30 + RandomDice.instance.result * 10);
+                MonsterAttack.instance.MonsterHP -= (30 + RandomDice.instance.result * AttackAmount);
+                Debug.Log("AttackAmount is " + AttackAmount);
                 Debug.Log("Player Attack");
-                if (MonsterAttack.instance.EnemySC.hp <= 0)
+                pflag = 1;
+                if (MonsterAttack.instance.MonsterHP <= 0)
                 {
-                    MonsterAttack.instance.EnemySC.hp = 0;
+                    MonsterAttack.instance.MonsterHP = 0;
                     Debug.Log("Monster is dead");
-                    //end
-                    pflag = 1;
-                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
-                    // SceneManager.LoadScene("BackGround_Test");
-                    win.SetActive(false);
+                    //¸ÊÀ¸·Î ÀÌµ¿
+                    SceneManager.LoadScene("MainScene");
                 }
 
-                Debug.Log("Monster's HP is " + MonsterAttack.instance.EnemySC.hp);
+                Debug.Log("Monster's HP is " + MonsterAttack.instance.MonsterHP);
             }
+        }
+        else if(ItemProp.instance.itemType == 1)
+        {
+            p = PlayerHP + HealAmount;
+            if (p > 100)
+            {
+                PlayerHP = 100;
+            }
+            else
+            {
+                PlayerHP = p;
+            }
+            pflag = 1;
+        }
+        else if (ItemProp.instance.itemType == 2)
+        {
+            p = PlayerSP + HealAmount;
+            if (p > 100)
+            {
+                PlayerSP = 100;
+            }
+            else
+            {
+                PlayerSP = p;
+            }
+            pflag = 1;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("setup", 5.0f);
+
     }
 
-    void setup(){
-        PlayerObj = GameObject.FindGameObjectsWithTag("Player")[0];
-        PlayerSC = PlayerObj.GetComponent<Player>();
-    }
     // Update is called once per frame
     void Update()
     {

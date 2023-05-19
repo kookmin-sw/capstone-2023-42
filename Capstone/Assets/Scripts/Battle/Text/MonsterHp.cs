@@ -6,18 +6,19 @@ using UnityEngine.UI;
 
 public class MonsterHp : MonoBehaviour
 {
-    Text HP;
+    Text MHP;
 
     // Start is called before the first frame update
     void Start()
     {
-        HP = GetComponent<Text>();
+        MHP = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MonsterAttack Instance = GameObject.Find("Monster").GetComponent<MonsterAttack>();
-        HP.text = Instance.EnemySC.hp.ToString();
+        //MonsterAttack Instance = GameObject.Find("Monster").GetComponent<MonsterAttack>();
+        //MHP.text = Instance.MonsterHP.ToString();
+        MHP.text = MonsterAttack.instance.MonsterHP.ToString();
     }
 }

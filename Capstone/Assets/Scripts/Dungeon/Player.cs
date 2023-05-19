@@ -9,19 +9,9 @@ public class Player : Character
     public bool playerTurn = true;
     public List<Enemy> enemyList = new List<Enemy>();
 
-    // [SerializeField]
-    // private GameObject Battle;
-    private GameObject battleCan;
-
-    public GameObject MonsterObj;
-    public MonsterAttack MASC;
-
     private void Awake()
     {
         instance = this;
-        battleCan = GameObject.Find("Battle Canvas");
-        MonsterObj = GameObject.Find("Monster");
-        MASC = MonsterObj.GetComponent<MonsterAttack>();
     }
     void Update()
     {
@@ -43,7 +33,16 @@ public class Player : Character
 
     protected override void Move(float x, float y)
     {
+        if(x < 0)
+        {
+            transform.right = new Vector3(-1,0,0);
+        }
+        else if(x > 0)
+        {
+            transform.right = new Vector3(1,0,0);
+        }
         base.Move(x, y);
+        transform.position = new Vector3(transform.position.x,transform.position.y, -1);
     }
 
     public bool CheckEnemyTurnFinish()
@@ -71,22 +70,11 @@ public class Player : Character
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            // GameObject Battle = GameObject.FindWithTag("Battle");
-            setup(other.gameObject);
-            GameObject Battle = battleCan.transform.Find("BackGroundImage").gameObject;
-            Battle.SetActive(true);
-            // SceneManager.LoadScene("Battle");
+            SceneManager.LoadScene("Battle");
         }
-    }
-
-    public void setup(GameObject Enemy){
-        MASC.EnemyObj = Enemy;
-        MASC.EnemySC = Enemy.GetComponent<Enemy>();
     }
 
     [Header("Prop data:")]
     public int HP = 0;
     public int Atack = 0;
-    public int SP = 0;
-
 }
