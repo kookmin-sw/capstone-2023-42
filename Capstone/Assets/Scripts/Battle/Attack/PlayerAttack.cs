@@ -45,6 +45,7 @@ public class PlayerAttack : MonoBehaviour
                     //������ �̵�
                     // SceneManager.LoadScene("BackGround_Test");
                     win.SetActive(false);
+                    Player.instance.gameObject.GetComponent<AudioSource>().Play();
                 }
 
                 Debug.Log("Monster's HP is " + MonsterAttack.instance.EnemySC.hp);
