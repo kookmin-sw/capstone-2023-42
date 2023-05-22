@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8ad6dd1d5bd2b47b16dfb7aa3f3fcd, type: 3}
+  m_Name: SkillPotion_3
+  m_EditorClassIdentifier: 
+  potionName: "\uD30C\uB780 \uD3EC\uC158(\uB300)"
+  potionLevel: 3
+  heal: 0
+  skill: 8
