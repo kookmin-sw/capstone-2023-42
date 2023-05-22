@@ -8,7 +8,7 @@ public class Player : Character
     public static Player instance;
     public bool playerTurn = true;
     public List<Enemy> enemyList = new List<Enemy>();
-
+    public AudioSource audioSource;
     public GameObject battleCan;
 
     public GameObject MonsterObj;
@@ -17,6 +17,7 @@ public class Player : Character
     private void Awake()
     {
         instance = this;
+        audioSource = GetComponent<AudioSource>();
         battleCan = GameObject.Find("Battle Canvas");
         MonsterObj = GameObject.Find("Monster");
         MASC = MonsterObj.GetComponent<MonsterAttack>();
@@ -83,9 +84,10 @@ public class Player : Character
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            // SceneManager.LoadScene("Battle");
             setup(other.gameObject);
             GameObject Battle = battleCan.transform.Find("BackGroundImage").gameObject;
+            audioSource.Stop();
+            other.gameObject.GetComponent<AudioSource>().Play();
             Battle.SetActive(true);
         }
     }
