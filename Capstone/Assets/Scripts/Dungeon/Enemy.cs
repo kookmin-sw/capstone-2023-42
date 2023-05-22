@@ -27,6 +27,10 @@ public class Enemy : Character
             enemyTurn = false;
             isTurn = false;
         }
+        if(hp<=0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     protected override void Move(float x, float y)
