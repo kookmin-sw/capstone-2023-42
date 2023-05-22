@@ -1,68 +1,68 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// public class ItemProp : MonoBehaviour
-// {
-//     public static ItemProp instance;
-//     //Itemdataï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ Propï¿½ï¿½ ï¿½Ö¾îµµ ï¿½Ç°ï¿½, 
-//     //ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 9ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Itemdataï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Propï¿½ï¿½ ï¿½Ö¾îµµ ï¿½ï¿½
-//     [SerializeField] public List<Prop> Itemdata = new List<Prop>(9);
-//     //Itemdata.Add(ï¿½ß°ï¿½ï¿½ï¿½ Propï¿½ï¿½ï¿½ï¿½);
-//     int ind = Item.instance.selectItem;
-//     public int itemType = 0; // 0: weapon, 1: healPotion, 2: skillPotion
+public class ItemProp : MonoBehaviour
+{
+    public static ItemProp instance;
+    //Itemdata¸®½ºÆ®¿¡ ÇÏ³ª¾¿ PropÀ» ³Ö¾îµµ µÇ°í, 
+    //¾Æ´Ï¸é »çÀÌÁî 9·Î ¸¸µé¾î ³õÀº Itemdata¸®½ºÆ®ÀÇ °¢ À§Ä¡¿¡ PropÀ» ³Ö¾îµµ µÊ
+    [SerializeField] public List<Prop> Itemdata = new List<Prop>(9);
+    //Itemdata.Add(Ãß°¡ÇÒ Prop³»¿ë);
+    int ind = Item.instance.selectItem;
+    public int itemType = 0; // 0: weapon, 1: healPotion, 2: skillPotion
 
-//     void Awake()
-//     {
-//         instance = this;
-//     }
+    void Awake()
+    {
+        instance = this;
+    }
 
-//     public void SetItemType()
-//     {
-//         if (Itemdata[ind].weapon == true)
-//         {
-//             itemType = 0;
-//         }
-//         else if (Itemdata[ind].healPotion == true)
-//         {
-//             itemType = 1;
-//         }
-//         else if (Itemdata[ind].skillPotion == true)
-//         {
-//             itemType = 2;
-//         }
-//     }
+    public void SetItemType()
+    {
+        if (Itemdata[ind].weapon == true)
+        {
+            itemType = 0;
+        }
+        else if (Itemdata[ind].healPotion == true)
+        {
+            itemType = 1;
+        }
+        else if (Itemdata[ind].skillPotion == true)
+        {
+            itemType = 2;
+        }
+    }
 
-//     public void SetAttackAmount(int type)
-//     {
-//         if(type == 0)
-//         {
-//             PlayerAttack.instance.AttackAmount = Itemdata[ind].weaponDamage;
-//         }
-//         else if(type == 1)
-//         {
-//             PlayerAttack.instance.HealAmount = Itemdata[ind].healAmount;
-//         }
-//     }
+    public void SetAttackAmount(int type)
+    {
+        if(type == 0)
+        {
+            PlayerAttack.instance.AttackAmount = Itemdata[ind].weaponDamage;
+        }
+        else if(type == 1)
+        {
+            PlayerAttack.instance.HealAmount = Itemdata[ind].healAmount;
+        }
+    }
 
-//     void check()
-//     {
-//         if(ind != -1)
-//         {
-//             SetItemType();
-//             SetAttackAmount(itemType);
-//         }
-//     }
+    void check()
+    {
+        if(ind != -1)
+        {
+            SetItemType();
+            SetAttackAmount(itemType);
+        }
+    }
 
-//     // Start is called before the first frame update
-//     void Start()
-//     {
+    // Start is called before the first frame update
+    void Start()
+    {
         
-//     }
+    }
 
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         check();
-//     }
-// }
+    // Update is called once per frame
+    void Update()
+    {
+        check();
+    }
+}
