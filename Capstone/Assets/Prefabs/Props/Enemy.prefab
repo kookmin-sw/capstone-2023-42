@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  animator: {fileID: 0}
   rb: {fileID: 2742873575729785146}
   canMove: 1
   direction: {x: 0, y: 0}
@@ -111,9 +110,9 @@ MonoBehaviour:
   moveSpeedPerFrame: 0.01
   enemyTurn: 0
   enemyName: 
-  hp: 85
-  minDamage: 10
-  maxDamage: 10
+  hp: 0
+  minDamage: 0
+  maxDamage: 0
 --- !u!50 &2742873575729785146
 Rigidbody2D:
   serializedVersion: 4
@@ -152,7 +151,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.55, y: 0.95}
+    oldSize: {x: 0.34375, y: 0.59375}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
