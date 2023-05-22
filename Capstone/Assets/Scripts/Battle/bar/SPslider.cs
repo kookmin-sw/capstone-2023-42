@@ -20,7 +20,7 @@ public class SPslider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nowSp = PlayerAttack.instance.PlayerSP;
+        nowSp = PlayerAttack.instance.PlayerSC.SP;
         nowSpbar.fillAmount = (float)nowSp / (float)maxSp;
     }
 }
