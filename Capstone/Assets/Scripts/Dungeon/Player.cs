@@ -97,6 +97,6 @@ public class Player : Character
 
     [Header("Prop data:")]
     public int HP = 0;
-    public int Atack = 0;
+    public int Attack = 0;
     public int SP = 0;
 }

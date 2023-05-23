@@ -8,6 +8,9 @@ public class Slot : MonoBehaviour
     public Prop item;
     public int itemCount;
     public Sprite itemImage;
+    public GameObject itemCanvas;
+    public InventoryItemUse IIU;
+    public GameObject button;
 
     // [SerializeField]
     // private Text text_Count;
@@ -80,5 +83,14 @@ public class Slot : MonoBehaviour
 
         // text_Count.text = "0";
         // go_CountImage.SetActive(false);
+    }
+
+    void Start(){
+        itemCanvas = GameObject.Find("ItemUseCanvas");
+        IIU = itemCanvas.GetComponent<InventoryItemUse>();
+    }
+
+    public void setup(){
+        IIU.ItemSlot = this;
     }
 }
