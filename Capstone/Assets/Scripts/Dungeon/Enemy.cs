@@ -25,7 +25,7 @@ public class Enemy : Character
 
         if (state == State.moveFinish)
         {
-            ChangeTurn();
+            StartCoroutine(ChangeTurn());
         }
 
         if (hp <= 0)
@@ -49,9 +49,10 @@ public class Enemy : Character
         base.Move();
     }
 
-    public void ChangeTurn()
+    public IEnumerator ChangeTurn()
     {
         state = State.playerTurn;
+        yield return new WaitForSeconds(1f);
         if(Player.instance.state != State.playerTurn || Player.instance.state != State.moving)
         {
             Player.instance.state = State.playerTurn;
