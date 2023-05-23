@@ -113,11 +113,13 @@ MonoBehaviour:
   moveSpeedPerFrame: 0.01
   enemyList: []
   audioSource: {fileID: 0}
+  playerTurnInfo: {fileID: 0}
+  enemyTurnInfo: {fileID: 0}
   battleCan: {fileID: 0}
   MonsterObj: {fileID: 0}
   MASC: {fileID: 0}
   HP: 8000
-  Atack: 10
+  Attack: 0
   SP: 75
 --- !u!50 &5449907468470402504
 Rigidbody2D:

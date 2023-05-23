@@ -96,11 +96,13 @@
      <Compile Include="Assets/Scripts/Dungeon/Character.cs" />
      <Compile Include="Assets/Scripts/Battle/Item/ItemProp.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/ItemPlacementHelper.cs" />
+     <Compile Include="Assets/Scripts/BackGround/Inventory/button.cs" />
      <Compile Include="Assets/Scripts/Battle/Text/Result.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/CorridorFirstDungeonGenerator.cs" />
      <Compile Include="Assets/Scripts/Battle/Attack/PMAttack.cs" />
      <Compile Include="Assets/Scripts/BackGround/PropInfo.cs" />
      <Compile Include="Assets/Scripts/Battle/Button/AttackButton.cs" />
+     <Compile Include="Assets/Scripts/BackGround/Inventory/InventoryItemUse.cs" />
      <Compile Include="Assets/Scripts/Battle/Button/InventoryOnOff.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/HardLight2D/ReadMe - FAQ.txt" />

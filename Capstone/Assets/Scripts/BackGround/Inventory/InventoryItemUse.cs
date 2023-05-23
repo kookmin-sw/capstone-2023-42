@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryItemUse : MonoBehaviour
 {
     public GameObject ItemObj;
     public Slot ItemSlot;
-
+    public Image ItemUse;
     public GameObject PlayerObj;
     public Player PlayerSC;
     
@@ -31,7 +32,9 @@ public class InventoryItemUse : MonoBehaviour
         else if(ItemSlot.item.weapon == true){
             PlayerSC.Attack = ItemSlot.item.weaponDamage;
         }
-
+        ItemUse.sprite = ItemSlot.itemImage;
+        ItemUse.color = new Color(1,1,1,1);
+        Debug.Log("ASDSAd");
         trash();
     }
     public void trash(){

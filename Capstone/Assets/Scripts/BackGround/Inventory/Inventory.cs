@@ -7,17 +7,18 @@ public class Inventory : MonoBehaviour
     public static bool invectoryActivated = false;
 
     [SerializeField]
-    private GameObject go_InventoryBase; 
-    [SerializeField] 
+    private GameObject go_InventoryBase;
+    [SerializeField]
     private GameObject go_SlotsParent;
 
-    private Slot[] slots; 
+    private Slot[] slots;
 
-     void Start()
+    void Start()
     {
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+        go_InventoryBase.SetActive(false);
     }
-
+   
     void Update()
     {
         TryOpenInventory();
@@ -49,7 +50,7 @@ public class Inventory : MonoBehaviour
 
     public void AcquireItem(Prop _item, int _count = 1)
     {
-        if(_item.weapon != true)
+        if (_item.weapon != true)
         {
             for (int i = 0; i < slots.Length; i++)
             {

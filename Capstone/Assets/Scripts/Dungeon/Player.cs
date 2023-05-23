@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Player : Character
 {
     public static Player instance;
     public List<Enemy> enemyList = new List<Enemy>();
     public AudioSource audioSource;
+    public GameObject playerTurnInfo;
+    public GameObject enemyTurnInfo;
     public GameObject battleCan;
     public GameObject MonsterObj;
     public MonsterAttack MASC;
@@ -23,9 +26,10 @@ public class Player : Character
 
     void Update()
     {
-
         if(state == State.playerTurn)
         {
+            playerTurnInfo.SetActive(true);
+            enemyTurnInfo.SetActive(false);
             moveRatio = 0f;
             MoveStart(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
@@ -60,6 +64,8 @@ public class Player : Character
             {
                 enemyList[i].state = State.enemyTurn;
             }
+            playerTurnInfo.SetActive(false);
+            enemyTurnInfo.SetActive(true);
         }
     }
 
