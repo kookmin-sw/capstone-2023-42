@@ -111,8 +111,8 @@ MonoBehaviour:
   movePixel: 1
   moveRatio: 0
   moveSpeedPerFrame: 0.01
-  playerTurn: 1
   enemyList: []
+  audioSource: {fileID: 0}
   battleCan: {fileID: 0}
   MonsterObj: {fileID: 0}
   MASC: {fileID: 0}

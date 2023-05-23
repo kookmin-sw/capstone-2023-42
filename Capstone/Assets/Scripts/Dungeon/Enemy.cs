@@ -5,47 +5,59 @@ using UnityEngine;
 public class Enemy : Character
 {
     public static Enemy instance;
-    public bool enemyTurn = false;
     bool isTurn = false;
-
     private void Awake()
     {
-        enemyTurn = false;
         instance = this;
     }
     void Update()
     {
-        if (enemyTurn)
+        if (state == State.enemyTurn)
         {
             float x = Random.Range(-1, 2);
             float y = Random.Range(-1, 2);
-            Move(x, y);
+            MoveStart(x, y);
+        }
+        if (state == State.moving)
+        {
+            Move();
         }
 
         if (state == State.moveFinish)
         {
-            enemyTurn = false;
-            isTurn = false;
+            ChangeTurn();
         }
-        if(hp<=0)
+
+        if (hp <= 0)
         {
             Destroy(gameObject);
         }
     }
 
-    protected override void Move(float x, float y)
+    protected override void Move()
     {
-        if (!isTurn && x < 0)
+        if (!isTurn && direction.x < 0)
         {
             transform.right = new Vector3(-1, 0, 0);
             isTurn = true;
         }
-        else if (!isTurn && x > 0)
+        else if (!isTurn && direction.x > 0)
         {
             transform.right = new Vector3(1, 0, 0);
             isTurn = true;
         }
-        base.Move(x, y);
+        base.Move();
+    }
+
+    public void ChangeTurn()
+    {
+        state = State.playerTurn;
+        if(Player.instance.state != State.playerTurn || Player.instance.state != State.moving)
+        {
+            Player.instance.state = State.playerTurn;
+        }
+        isTurn = false;
+
     }
 
     [Header("Info")]

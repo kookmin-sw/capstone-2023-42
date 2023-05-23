@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 public class Player : Character
 {
     public static Player instance;
-    public bool playerTurn = true;
     public List<Enemy> enemyList = new List<Enemy>();
     public AudioSource audioSource;
     public GameObject battleCan;
-
     public GameObject MonsterObj;
     public MonsterAttack MASC;
 
@@ -21,64 +19,47 @@ public class Player : Character
         battleCan = GameObject.Find("Battle Canvas");
         MonsterObj = GameObject.Find("Monster");
         MASC = MonsterObj.GetComponent<MonsterAttack>();
-        
-        // instance = this;
-        // battleCan = GameObject.Find("Battle Canvas");
-        // MonsterObj = GameObject.Find("Monster");
-        // MASC = MonsterObj.GetComponent<MonsterAttack>();
     }
+
     void Update()
     {
-        if (playerTurn)
-        {
-            Move(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        }
 
-        if (state == State.moveStart && playerTurn)
+        if(state == State.playerTurn)
         {
-            ChangeTurn();
+            moveRatio = 0f;
+            MoveStart(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
-
-        if (CheckEnemyTurnFinish())
+        if (state == State.moving)
         {
-            playerTurn = true;
+            Move();
         }
+        StartCoroutine(ChangeTurn());
     }
 
-    protected override void Move(float x, float y)
+    protected override void Move()
     {
-        if(x < 0)
+        if(direction.x < 0)
         {
             transform.right = new Vector3(-1,0,0);
         }
-        else if(x > 0)
+        else if(direction.x > 0)
         {
             transform.right = new Vector3(1,0,0);
         }
-        base.Move(x, y);
+        base.Move();
         transform.position = new Vector3(transform.position.x,transform.position.y, -1);
     }
 
-    public bool CheckEnemyTurnFinish()
+    public IEnumerator ChangeTurn()
     {
-        bool enemyTurnFinish = true;
-        for (int i = 0; i < enemyList.Count; i++)
+        yield return new WaitForSeconds(2f);
+        if(state == State.moveFinish)
         {
-            if (enemyList[i].state != State.moveFinish)
+            state = State.enemyTurn;
+            for(int i=0; i<enemyList.Count; i++)
             {
-                enemyTurnFinish = false;
+                enemyList[i].state = State.enemyTurn;
             }
-        }
-
-        return enemyTurnFinish;
-    }
-
-    public void ChangeTurn()
-    {
-        playerTurn = !playerTurn;
-        for (int i = 0; i < enemyList.Count; i++)
-        {
-            enemyList[i].enemyTurn = !enemyList[i].enemyTurn;
         }
     }
 

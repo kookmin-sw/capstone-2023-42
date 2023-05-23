@@ -110,7 +110,6 @@ MonoBehaviour:
   movePixel: 1
   moveRatio: 0
   moveSpeedPerFrame: 0.01
-  enemyTurn: 0
   enemyName: 
   hp: 85
   minDamage: 10
