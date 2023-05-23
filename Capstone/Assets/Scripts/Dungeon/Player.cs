@@ -14,6 +14,8 @@ public class Player : Character
     public GameObject battleCan;
     public GameObject MonsterObj;
     public MonsterAttack MASC;
+    public GameObject walkSound;
+    public bool walk = false;
 
     private void Awake()
     {
@@ -40,8 +42,20 @@ public class Player : Character
         StartCoroutine(ChangeTurn());
     }
 
+    protected override void MoveStart(float x, float y)
+    {
+        base.MoveStart(x, y);
+    }
+
     protected override void Move()
     {
+        if(!walk)
+        {
+            walkSound.GetComponent<AudioSource>().Play();
+            animator.SetTrigger("Run");
+            Debug.Log("asdas");
+            walk = true;
+        }
         if(direction.x < 0)
         {
             transform.right = new Vector3(-1,0,0);
@@ -66,6 +80,7 @@ public class Player : Character
             }
             playerTurnInfo.SetActive(false);
             enemyTurnInfo.SetActive(true);
+            walk = false;
         }
     }
 

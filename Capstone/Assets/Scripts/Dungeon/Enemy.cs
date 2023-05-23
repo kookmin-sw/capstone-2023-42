@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : Character
 {
     public static Enemy instance;
+    bool walk = false;
     bool isTurn = false;
     private void Awake()
     {
@@ -46,18 +47,24 @@ public class Enemy : Character
             transform.right = new Vector3(1, 0, 0);
             isTurn = true;
         }
+        if(!walk)
+        {
+            animator.SetTrigger("Run");
+            walk = true;
+        }
         base.Move();
     }
 
     public IEnumerator ChangeTurn()
     {
         state = State.playerTurn;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         if(Player.instance.state != State.playerTurn || Player.instance.state != State.moving)
         {
             Player.instance.state = State.playerTurn;
         }
         isTurn = false;
+        walk = false;
 
     }
 
