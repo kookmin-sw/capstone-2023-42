@@ -1,4 +1,4 @@
-<img src = './images/logo.png' width="80%" height="40%">
+<img src = './images/logo.png' width="70%" height="35%">
 <img src = './images/dice.png' width="20%" height="10%">
 
 ### 1. 프로젝트 소개
