@@ -53,7 +53,6 @@ public class Player : Character
         {
             walkSound.GetComponent<AudioSource>().Play();
             animator.SetTrigger("Run");
-            Debug.Log("asdas");
             walk = true;
         }
         if(direction.x < 0)

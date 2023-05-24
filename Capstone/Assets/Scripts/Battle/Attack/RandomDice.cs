@@ -17,18 +17,8 @@ public class RandomDice : MonoBehaviour
 
     public void Roll()
     {
-        //-2 -1 0 1 2 3
-        r = Random.Range(-2, 4);
-        if(r == 0)
-        {
-            //-3 -2 -1 1 2 3
-            result = -3;
-        }
-        else
-        {
-            result = r;
-        }
-        Debug.Log("Result is " + result);
+        r = Random.Range(1, 7);
+        result = r;
     }
 
     // Start is called before the first frame update
