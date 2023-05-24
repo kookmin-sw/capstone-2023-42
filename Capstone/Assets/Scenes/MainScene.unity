@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854bab4789bb27144823b41e8abd9e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dice: {fileID: 0}
   result: 0
 --- !u!114 &52929642
 MonoBehaviour:
@@ -12756,7 +12757,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 3137872022249315039, guid: bdb9a65addf1ba347b9358d78b07934c, type: 3}
   playerRoomIndex: 0
   vCamera: {fileID: 189883101}
-  roomEnemiesCount: 010000000100000001000000
+  roomEnemiesCount: 050000000500000005000000
   showGizmo: 0
   playerTurnInfo: {fileID: 1809477710}
   enemyTurnInfo: {fileID: 760588601}
@@ -13309,6 +13310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854bab4789bb27144823b41e8abd9e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dice: {fileID: 0}
   result: 0
 --- !u!114 &692769445266911618
 MonoBehaviour:
@@ -18888,7 +18890,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 450}
+  m_SizeDelta: {x: 285.3, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6422653770425290975
 GameObject:
@@ -19344,6 +19346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854bab4789bb27144823b41e8abd9e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dice: {fileID: 0}
   result: 0
 --- !u!224 &6422653770685598813
 RectTransform:

@@ -121,9 +121,9 @@ MonoBehaviour:
   MASC: {fileID: 0}
   walkSound: {fileID: 5026984620857614502}
   walk: 0
-  HP: 8000
-  Attack: 0
-  SP: 75
+  HP: 100
+  Attack: 5
+  SP: 100
 --- !u!50 &5449907468470402504
 Rigidbody2D:
   serializedVersion: 4

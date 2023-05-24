@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PropSprite: {fileID: 1943428218, guid: e63597f9a0b838e49b8c8fca4dcad948, type: 3}
   PropSize: {x: 1, y: 1}
-  Inner: 0
+  Inner: 1
   PlacementPerRoomsMin: 1
   PlacementPerRoomsMax: 1
-  MaxAmount: 2
+  MaxAmount: 5
   count: 0
   PlaceAsGroup: 0
   GroupMinCount: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
   maxDamage: 0
   healPotion: 1
   skillPotion: 0
-  healAmount: 10
+  healAmount: 20
   weapon: 0
   weaponName: 
   weaponDamage: 0
