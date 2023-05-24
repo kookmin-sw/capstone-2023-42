@@ -9,7 +9,7 @@ public class PMAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Awake()
@@ -22,10 +22,13 @@ public class PMAttack : MonoBehaviour
         AttackButton.instance.attButton.enabled = false;
         //if (Input.GetKeyDown(KeyCode.Space))
         PlayerAttack.instance.PAttack();
-        yield return new WaitForSeconds(2);
-        MonsterAttack.instance.MAttack();
-        AttackButton.instance.AButton = 0;
-        AttackButton.instance.attButton.enabled = true;
+        if (MonsterAttack.instance.EnemySC.hp > 0)
+        {
+            yield return new WaitForSeconds(2);
+            MonsterAttack.instance.MAttack();
+            AttackButton.instance.AButton = 0;
+            AttackButton.instance.attButton.enabled = true;
+        }
     }
 
     public void Attack()
@@ -57,6 +60,6 @@ public class PMAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

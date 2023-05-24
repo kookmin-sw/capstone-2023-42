@@ -11,6 +11,7 @@ public class MonsterAttack : MonoBehaviour
     public GameObject WinImage;
     public GameObject EnemyObj;
     public Enemy EnemySC;
+    public GameObject monsterDice;
 
     void Awake()
     {
@@ -21,9 +22,12 @@ public class MonsterAttack : MonoBehaviour
     {
         if (mflag == 0)
         {
-            RandomDice.instance.Roll();
-            PlayerAttack.instance.PlayerSC.HP -= (30 + RandomDice.instance.result * 10);
-            Debug.Log("Player's HP is " + PlayerAttack.instance.PlayerSC.HP);
+            if (EnemySC.hp > 0)
+            {
+                monsterDice.SetActive(true);
+                monsterDice.GetComponent<Animator>().SetTrigger("Roll");
+                PlayerAttack.instance.playerDice.SetActive(false);
+            }
         }
     }
 
@@ -50,6 +54,7 @@ public class MonsterAttack : MonoBehaviour
 
     public IEnumerator PlayerWin()
     {
+        yield return new WaitForSeconds(2f);
         WinImage.SetActive(true);
         yield return new WaitForSeconds(3f);
         WinImage.SetActive(false);

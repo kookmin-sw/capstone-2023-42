@@ -34,15 +34,15 @@ public class ChangeDIMG : MonoBehaviour
         {
             current.sprite = dice3;
         }
-        else if (r == -1)
+        else if (r == 4)
         {
             current.sprite = diceM1;
         }
-        else if (r == -2)
+        else if (r == 5)
         {
             current.sprite = diceM2;
         }
-        else if (r == -3)
+        else if (r == 6)
         {
             current.sprite = diceM3;
         }
