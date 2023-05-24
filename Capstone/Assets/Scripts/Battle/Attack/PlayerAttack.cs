@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject LoseImage;
     public Player PlayerSC;
     public GameObject playerDice;
+    public AudioSource attackSound;
 
     void Awake()
     {
@@ -41,6 +42,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         Invoke("setup", 3.0f);
+        attackSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -69,5 +71,12 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(3f);
         LoseImage.SetActive(false);
         SceneManager.LoadScene("GameOver");
+    }
+
+    public void Run()
+    {
+        PlayerSC.HP -= 10;
+        Player.instance.monsterFighting.GetComponent<AudioSource>().Stop();
+        Player.instance.gameObject.GetComponent<AudioSource>().Play();
     }
 }

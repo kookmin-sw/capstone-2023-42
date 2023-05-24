@@ -12,6 +12,7 @@ public class MonsterAttack : MonoBehaviour
     public GameObject EnemyObj;
     public Enemy EnemySC;
     public GameObject monsterDice;
+    public AudioSource attackSound;
 
     void Awake()
     {
@@ -36,6 +37,7 @@ public class MonsterAttack : MonoBehaviour
     {
         EnemyObj = null;
         EnemySC = null;
+        attackSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
