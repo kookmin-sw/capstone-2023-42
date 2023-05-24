@@ -1,7 +1,4 @@
-<img src = './images/logo.png' width="80%" height="40%">   
-<div style="float: left">
-    <img src = './images/dice.png' height="40px" width="40px">
-</div>
+<img src = './images/logo.png' width="80%" height="40%">
 
 ### 1. 프로젝트 소개
 주사위 기반 2D RPG 로그라이크 게임   
@@ -14,19 +11,9 @@
 * **전투**   
 몬스터와 플레이어가 한 턴씩 공격합니다. 랜덤한 주사위 값에 따라 공격 강도가 정해지며 가방에 있는 아이템을 사용할 수 있습니다. 전투에서 승리하거나 도망버튼을 누르면 다시 맵으로 가서 던전을 탐색할 수 있습니다. 전투에서 패배하면 로그라이크 게임 특성상 바로 게임이 끝이 납니다.   
 
-
-<div style="float: left">
-    <img src = './images/dice.png' height="40px" width="40px">
-</div>
-
  ### 2. 소개 영상
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V9eildmhIRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q2Ls2-C5apU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-<div style="float: left">
-    <img src = './images/dice.png' height="40px" width="40px">
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V9eildmhIRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q2Ls2-C5apU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
 
 ### 3. 팀 소개
 20203052 김지훈   
@@ -40,11 +27,6 @@ Email : spasis12@kookmin.ac.kr
 20202075 김채린   
 역할 : 전투장면 구현   
 Email : chearin0410@kookmin.ac.kr   
-
-
-<div style="float: left">
-    <img src = './images/dice.png' height="40px" width="40px">
-</div>
 
 ### 4. 사용법
 Capstone 폴더의 파일을 내려받아서 유니티로 열면 게임 개발 상태를 확인할 수 있고, 시작버튼을 눌러서 게임을 플레이 할 수 있습니다.
