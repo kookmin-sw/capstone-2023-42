@@ -1,6 +1,6 @@
 
 <img src = './images/logo.png' width="60%" height="40%">
-
+<img src = './images/dice.png' width="60%" height="40%">
 ### 1. 프로젝트 소개
 주사위 기반 2D RPG 로그라이크 게임   
 적과 플레이어가 번갈아 가면서 공격하는 턴제 게임이고, Top view로 구현했습니다.
@@ -20,14 +20,14 @@
 역할 : 맵 구현  
 Email : ricon4246@kookmin.ac.kr   
 
-20202075 김채린   
-역할 : 전투장면 구현   
-Email : chearin0410@kookmin.ac.kr   
-
 20191682 최지원   
 역할 : 캐릭터 이동 구현   
 Email : spasis12@kookmin.ac.kr   
 
+20202075 김채린   
+역할 : 전투장면 구현   
+Email : chearin0410@kookmin.ac.kr   
+
 ### 4. 사용법
-유니티에서 Capstone폴더의 파일을 내려받아서 열면 게임 개발 상태를 확인할 수 있고, 시작버튼을 눌러서 게임을 플레이 할 수 있습니다.
+Capstone 폴더의 파일을 내려받아서 유니티로 열면 게임 개발 상태를 확인할 수 있고, 시작버튼을 눌러서 게임을 플레이 할 수 있습니다.
 
