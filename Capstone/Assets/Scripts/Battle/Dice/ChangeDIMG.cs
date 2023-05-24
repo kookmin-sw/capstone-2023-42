@@ -5,52 +5,43 @@ using UnityEngine.UI;
 
 public class ChangeDIMG : MonoBehaviour
 {
+    public static ChangeDIMG instance;
     public Sprite dice1;
     public Sprite dice2;
     public Sprite dice3;
     public Sprite diceM1;
     public Sprite diceM2;
     public Sprite diceM3;
-    Image current;
+    public Text text;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        current = GetComponent<Image>();
+    private void Awake() {
+        instance = this;
     }
-
-    void Change()
+    public void Change(Image image ,int r)
     {
-        int r = RandomDice.instance.result;
         if (r == 1)
         {
-            current.sprite = dice1;
+            image.sprite = dice1;
         }
         else if (r == 2)
         {
-            current.sprite = dice2;
+            image.sprite = dice2;
         }
         else if (r == 3)
         {
-            current.sprite = dice3;
+            image.sprite = dice3;
         }
         else if (r == 4)
         {
-            current.sprite = diceM1;
+            image.sprite = diceM1;
         }
         else if (r == 5)
         {
-            current.sprite = diceM2;
+            image.sprite = diceM2;
         }
         else if (r == 6)
         {
-            current.sprite = diceM3;
+            image.sprite = diceM3;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Change();
     }
 }
