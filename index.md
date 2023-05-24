@@ -1,5 +1,4 @@
-<img src = './images/logo.png' width="70%" height="35%">
-<img src = './images/dice.png' width="20%" height="10%">
+<img src = './images/logo.png' width="80%" height="40%">
 
 ### 1. 프로젝트 소개
 주사위 기반 2D RPG 로그라이크 게임   
