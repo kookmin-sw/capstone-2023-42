@@ -17,6 +17,7 @@ public class Player : Character
     public GameObject walkSound;
     public GameObject monsterFighting;
     public bool walk = false;
+    public bool fighting = false;
 
     private void Awake()
     {
@@ -85,13 +86,14 @@ public class Player : Character
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Enemy")) {
+        if (other.gameObject.CompareTag("Enemy") && !fighting) {
             monsterFighting = other.gameObject;
             setup(other.gameObject);
             GameObject Battle = battleCan.transform.Find("BackGroundImage").gameObject;
             audioSource.Stop();
             other.gameObject.GetComponent<AudioSource>().Play();
             Battle.SetActive(true);
+            fighting = true;
         }
     }
 

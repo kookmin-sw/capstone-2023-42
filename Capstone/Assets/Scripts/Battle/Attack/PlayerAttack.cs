@@ -70,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
         LoseImage.SetActive(true);
         yield return new WaitForSeconds(3f);
         LoseImage.SetActive(false);
+        Player.instance.fighting = false;
         SceneManager.LoadScene("GameOver");
     }
 
@@ -78,5 +79,6 @@ public class PlayerAttack : MonoBehaviour
         PlayerSC.HP -= 10;
         Player.instance.monsterFighting.GetComponent<AudioSource>().Stop();
         Player.instance.gameObject.GetComponent<AudioSource>().Play();
+        Player.instance.fighting = false;
     }
 }

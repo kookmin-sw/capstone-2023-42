@@ -60,6 +60,7 @@ public class MonsterAttack : MonoBehaviour
         WinImage.SetActive(true);
         yield return new WaitForSeconds(3f);
         WinImage.SetActive(false);
+        Player.instance.fighting = false;
         PlayerAttack.instance.pflag = 1;
         PlayerAttack.instance.win.SetActive(false);
         Player.instance.gameObject.GetComponent<AudioSource>().Play();
