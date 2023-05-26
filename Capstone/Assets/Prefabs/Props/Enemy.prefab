@@ -112,7 +112,7 @@ MonoBehaviour:
   moveSpeedPerFrame: 0.01
   enemyName: 
   hp: 85
-  minDamage: 10
+  minDamage: 5
   maxDamage: 10
 --- !u!50 &2742873575729785146
 Rigidbody2D:

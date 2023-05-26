@@ -12797,7 +12797,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 3137872022249315039, guid: bdb9a65addf1ba347b9358d78b07934c, type: 3}
   playerRoomIndex: 0
   vCamera: {fileID: 189883101}
-  roomEnemiesCount: 010000000100000001000000
+  roomEnemiesCount: 050000000500000005000000
   showGizmo: 0
   playerTurnInfo: {fileID: 1809477710}
   enemyTurnInfo: {fileID: 760588601}
