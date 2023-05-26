@@ -51,6 +51,7 @@
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/New Folder/PropPlacementManager.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/New Folder/test.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/New Folder/Prop.cs" />
+     <Compile Include="Assets/Scripts/Battle/Monster/MonsterAnimation.cs" />
      <Compile Include="Assets/Scripts/BackGround/Map_Test/RoomSpawner.cs" />
      <Compile Include="Assets/Scripts/Battle/Item/ChangeIIMG.cs" />
      <Compile Include="Assets/Scripts/BackGround/Procedural/ProceduralProps/New Folder/RoomDataExtractor.cs" />
@@ -104,7 +105,6 @@
      <Compile Include="Assets/Scripts/Battle/Button/AttackButton.cs" />
      <Compile Include="Assets/Scripts/BackGround/Inventory/InventoryItemUse.cs" />
      <Compile Include="Assets/Scripts/Battle/Button/InventoryOnOff.cs" />
-     <Compile Include="Assets/Scripts/Battle/Monster/MonsterAnimation.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/HardLight2D/ReadMe - FAQ.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
