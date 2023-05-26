@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Capstone/Assets/Scripts/Battle/Dice.meta
 guid: 316d61a07c34bce4483dadf7157df9c8
+========
+guid: 2757e8d3f84012f4d975242b9a542ceb
+>>>>>>>> JiHun:Capstone/Assets/Scripts/BackGround/Inventory.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

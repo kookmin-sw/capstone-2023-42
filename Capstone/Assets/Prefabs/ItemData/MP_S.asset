@@ -17,7 +17,7 @@ MonoBehaviour:
   Inner: 1
   PlacementPerRoomsMin: 2
   PlacementPerRoomsMax: 2
-  MaxAmount: 2
+  MaxAmount: 5
   count: 0
   PlaceAsGroup: 0
   GroupMinCount: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
   maxDamage: 0
   healPotion: 0
   skillPotion: 1
-  healAmount: 0
+  healAmount: 20
   weapon: 0
   weaponName: 
   weaponDamage: 0

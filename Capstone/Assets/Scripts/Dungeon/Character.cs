@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public enum State
     {
-        gameStart,moveStart, moving, moveFinish
+        gameStart, playerTurn, enemyTurn, moving, moveFinish
     }
     public State state;
     public Animator animator;
@@ -20,14 +20,17 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        state = State.gameStart;
+        state = State.playerTurn;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
-    protected virtual void Move(float x, float y)
+    protected virtual void MoveStart(float x, float y)
     {
         if (!canMove)
+            return;
+
+        if (x == 0 && y == 0)
             return;
 
         if (x != 0 && y != 0)
@@ -35,10 +38,8 @@ public class Character : MonoBehaviour
             y = 0;
         }
 
-
         if (moveRatio == 0f)
         {
-            
             if (x != 0 || y != 0)
             {
                 direction = new Vector2(x, y) * movePixel;
@@ -52,15 +53,17 @@ public class Character : MonoBehaviour
                 }
                 moveRatio += moveSpeedPerFrame;
 
-                state = State.moveStart;
+                state = State.moving;
             }
         }
-        else if (moveRatio < 1f)
+    }
+
+    protected virtual void Move()
+    {
+        if (moveRatio < 1f)
         {
             rb.MovePosition(Vector3.Lerp(transform.position, dest, moveRatio));
             moveRatio += moveSpeedPerFrame;
-            state = State.moving;
-            //animator.SetTrigger("Run");
         }
 
         if (rb.position == dest || moveRatio >= 1f)
@@ -69,14 +72,13 @@ public class Character : MonoBehaviour
             transform.position = new Vector2(Mathf.Floor(transform.position.x) + 0.5f, Mathf.Floor(transform.position.y) + 0.5f);
             state = State.moveFinish;
             StartCoroutine(StopMove());
-            //animator.SetTrigger("Idle");
         }
     }
 
     IEnumerator StopMove()
     {
         canMove = false;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         canMove = true;
     }
 }

@@ -23,6 +23,9 @@ public class AgentPlacer : MonoBehaviour
     [SerializeField]
     private bool showGizmo = false;
 
+    public GameObject playerTurnInfo;
+    public GameObject enemyTurnInfo;
+
     private void Awake()
     {
         dungeonData = FindObjectOfType<DungeonData>();
@@ -61,6 +64,9 @@ public class AgentPlacer : MonoBehaviour
                 vCamera.Follow = player.transform;
                 vCamera.LookAt = player.transform;
                 dungeonData.PlayerReference = player;
+
+                player.GetComponent<Player>().playerTurnInfo = playerTurnInfo;
+                player.GetComponent<Player>().enemyTurnInfo = enemyTurnInfo;
             }
 
             //did we add this room to the roomEnemiesCount list?

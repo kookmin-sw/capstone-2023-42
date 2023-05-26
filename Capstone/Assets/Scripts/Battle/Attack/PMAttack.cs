@@ -9,7 +9,7 @@ public class PMAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Awake()
@@ -22,14 +22,13 @@ public class PMAttack : MonoBehaviour
         AttackButton.instance.attButton.enabled = false;
         //if (Input.GetKeyDown(KeyCode.Space))
         PlayerAttack.instance.PAttack();
-        yield return new WaitForSeconds(1);
-        if(PlayerAttack.instance.pflag == 1)
+        if (MonsterAttack.instance.EnemySC.hp > 0)
         {
+            yield return new WaitForSeconds(2);
             MonsterAttack.instance.MAttack();
-            yield return new WaitForSeconds(1);
-        }        
-        AttackButton.instance.AButton = 0;
-        AttackButton.instance.attButton.enabled = true;
+            AttackButton.instance.AButton = 0;
+            AttackButton.instance.attButton.enabled = true;
+        }
     }
 
     public void Attack()
@@ -47,7 +46,7 @@ public class PMAttack : MonoBehaviour
            }
           */
         /*
-            //pflag(PlayerAttackÀ¸·Î Monster°¡ Á×À½)¿Í mflag(MonsterAttackÀ¸·Î Player°¡ Á×À½)
+            //pflag(PlayerAttackï¿½ï¿½ï¿½ï¿½ Monsterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ mflag(MonsterAttackï¿½ï¿½ï¿½ï¿½ Playerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
             if (PlayerAttack.instance.pflag == 1 ||MonsterAttack.instance.mflag == 1 )
             {
                 Application.Quit();
@@ -61,6 +60,6 @@ public class PMAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

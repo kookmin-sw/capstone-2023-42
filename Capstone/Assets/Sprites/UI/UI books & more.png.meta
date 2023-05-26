@@ -2646,13 +2646,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI books & more_121
+      name: NameBlock
       rect:
         serializedVersion: 2
         x: 16
-        y: 128
-        width: 128
-        height: 96
+        y: 192
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5092,6 +5092,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      NameBlock: -1718623786
       UI books & more_0: -188387543
       UI books & more_1: -556397623
       UI books & more_10: -1052403412
@@ -5118,7 +5119,6 @@ TextureImporter:
       UI books & more_119: -1468225904
       UI books & more_12: -1371038617
       UI books & more_120: -774851764
-      UI books & more_121: -1718623786
       UI books & more_122: 616430025
       UI books & more_123: -45466900
       UI books & more_124: -882973604
