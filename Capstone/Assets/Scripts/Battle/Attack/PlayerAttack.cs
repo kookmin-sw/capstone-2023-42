@@ -23,19 +23,29 @@ public class PlayerAttack : MonoBehaviour
 
     public void PAttack()
     {
-        if (pflag == 0)
+        // if (pflag == 0)
+        // {
+        //     //PlayerSP-=attackSP;
+        //     if (PlayerSP <= 0)
+        //     {
+        //         Debug.Log("SP is not enough");
+        //     }
+        //     else
+        //     {
+        //         MonsterAttack.instance.monsterDice.SetActive(false);
+        //         playerDice.SetActive(true);
+        //         playerDice.GetComponent<Animator>().SetTrigger("Roll");
+        //     }
+        // }
+        if (PlayerSP <= 0)
         {
-            //PlayerSP-=attackSP;
-            if (PlayerSP <= 0)
-            {
-                Debug.Log("SP is not enough");
-            }
-            else
-            {
-                MonsterAttack.instance.monsterDice.SetActive(false);
-                playerDice.SetActive(true);
-                playerDice.GetComponent<Animator>().SetTrigger("Roll");
-            }
+            Debug.Log("SP is not enough");
+        }
+        else
+        {
+            MonsterAttack.instance.monsterDice.SetActive(false);
+            playerDice.SetActive(true);
+            playerDice.GetComponent<Animator>().SetTrigger("Roll");
         }
     }
 
