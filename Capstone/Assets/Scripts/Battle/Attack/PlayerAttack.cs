@@ -42,7 +42,8 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("SP is not enough");
         }
         else
-        {
+        {   
+            PlayerSC.SP -= 15;
             MonsterAttack.instance.monsterDice.SetActive(false);
             playerDice.SetActive(true);
             playerDice.GetComponent<Animator>().SetTrigger("Roll");
