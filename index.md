@@ -9,7 +9,18 @@
 * **캐릭터 이동**   
 격자형식으로 이동하고, 가고 싶은 위치를 키보드 입력을 통해 이동할 수 있습니다. 빛을 플레이어 캐릭터 주변에만 켜지도록 시야를 조절하였습니다. 그리고 맵을 이동하는 중에 아이템을 획득하면 가방에 저장되고 몬스터와 플레이어가 만나면 전투장면으로 이동합니다.   
 * **전투**   
-몬스터와 플레이어가 한 턴씩 공격합니다. 랜덤한 주사위 값에 따라 공격 강도가 정해지며 가방에 있는 아이템을 사용할 수 있습니다. 전투에서 승리하거나 도망버튼을 누르면 다시 맵으로 가서 던전을 탐색할 수 있습니다. 전투에서 패배하면 로그라이크 게임 특성상 바로 게임이 끝이 납니다.   
+몬스터와 플레이어가 한 턴씩 공격합니다. 랜덤한 주사위 값에 따라 공격 강도가 정해지며 가방에 있는 아이템을 사용할 수 있습니다. 전투에서 승리하거나 도망버튼을 누르면 다시 맵으로 가서 던전을 탐색할 수 있습니다. 전투에서 패배하면 로그라이크 게임 특성상 바로 게임이 끝이 납니다.
+
+### 1. Project Introduction
+2D RPG RougeLike Game Based on Dice
+It is a turn-based game in which enemies and players attack alternately, and it is implemented as a top view.
+
+* **Map**
+When a character moves a randomly generated map and encounters an enemy, it enters the battle scene. A certain number of monsters appear in the random position of the map, as many items are created in the random position of the map.
+* **Moving characters**
+You can move in a grid format, and move where you want to go through keyboard input. The view has been adjusted so that the light is only turned on around the player character. And if you get an item while moving the map, it's saved in your bag, and when the monster and the player meet, it moves to the battle scene.
+* **Battle**
+Monsters and players attack one turn at a time. A random die value determines the attack intensity and allows you to use items in your bag. You can go back to the map and explore the dungeon by winning the battle or pressing the escape button. If you lose a battle, the game ends right away due to the nature of the rougelike game.
 
 ### 2. 소개 영상
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V9eildmhIRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
